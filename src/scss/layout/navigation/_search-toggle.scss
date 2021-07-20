@@ -1,0 +1,138 @@
+/*-----------------------------------------------
+
+ # Stylesheet: Navigation Search Toggle
+
+ ----------------------------------------------*/
+
+.search-toggle {
+	display: none;
+	background-color: $search-toggle__background-color;
+	width: $search-toggle__width;
+	height: $search-toggle__height;
+	line-height: 1;
+	border: $search-toggle__border;
+	border-radius: $search-toggle__border-radius;
+	box-shadow: $search-toggle__box-shadow;
+	cursor: pointer;
+	position: relative;
+	transform: rotate(0deg);
+	transition: transform 0.5s ease, background-color 0.2s ease, border 0.2s ease,
+		border-radius 0.2s ease, box-shadow 0.2s ease, width 0.2s ease, height 0.2s ease;
+	z-index: 10;
+
+	.search-toggle-label {
+	}
+
+	.search-toggle__glass {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		width: 45%;
+		height: 45%;
+		border: 3px solid $search-toggle__icon__color;
+		border-radius: 100%;
+		transform: translate3d(-65%, -65%, 0) scale3d(1, 1, 1);
+		transform-origin: left top;
+		transition: transform 0.25s ease 0.3s, border-color 0.2s ease;
+	}
+
+	.search-toggle__handle {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		width: rem(8px);
+		height: $menu-toggle__line__height;
+		background-color: $search-toggle__icon__color;
+		transform: translate3d(10%, 270%, 0) rotate(45deg);
+		transform-origin: right center;
+		transition: background-color 0.2s ease, width 0.2s ease 0.3s, transform 0.2s linear 0.3s,
+			transform-origin 0.2s ease-in 0.3s;
+	}
+
+	.search-toggle__line {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		width: 0%;
+		height: rem(3px);
+		background-color: $search-toggle__icon__color;
+		transform: translate3d(-50%, -50%, 0) rotate(45deg);
+		transition: width 0s ease 0.3s, transform 0.3s ease, background-color 0.2s ease;
+	}
+
+	&:hover {
+		background-color: $search-toggle__background-color--hover;
+		border: $search-toggle__border--hover;
+		border-radius: $search-toggle__border-radius--hover;
+		box-shadow: $search-toggle__box-shadow--hover;
+
+		.search-toggle__glass {
+			border-color: $search-toggle__icon__color--hover;
+		}
+
+		.search-toggle__handle,
+		.search-toggle__line {
+			background-color: $search-toggle__icon__color--hover;
+		}
+	}
+
+	&:focus {
+		background-color: $search-toggle__background-color--focus;
+		border: $search-toggle__border--focus;
+		border-radius: $search-toggle__border-radius--focus;
+		box-shadow: $search-toggle__box-shadow--focus;
+		outline: $search-toggle__outline;
+
+		.search-toggle__glass {
+			border-color: $search-toggle__icon__color--focus;
+		}
+
+		.search-toggle__handle,
+		.search-toggle__line {
+			background-color: $search-toggle__icon__color--focus;
+		}
+	}
+
+	&:active,
+	&.is-active {
+		background-color: $search-toggle__background-color--active;
+		border: $search-toggle__border--active;
+		border-radius: $search-toggle__border-radius--active;
+		box-shadow: $search-toggle__box-shadow--active;
+		transform: rotate(-90deg);
+		z-index: 120;
+
+		.search-toggle__glass {
+			border-color: $search-toggle__icon__color--active;
+			transform: translate3d(-40%, -40%, 0) scale3d(0, 0, 0);
+			transition: border-color 0.2s ease, transform 0.2s ease;
+		}
+
+		.search-toggle__handle {
+			background-color: $search-toggle__icon__color--active;
+			width: $menu-toggle__line__width;
+			transform: translate3d(-50%, -50%, 0) rotate(45deg);
+			transform-origin: center;
+			transition: background-color 0.2s ease, width 0.1s ease, transform 0.2s ease,
+				transform-origin 0.05s linear;
+		}
+
+		.search-toggle__line {
+			background-color: $search-toggle__icon__color--active;
+			width: $menu-toggle__line__width;
+			transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+			transition: background-color 0.2s ease, width 0s ease 0.2s, transform 0.3s ease 0.2s;
+		}
+	}
+}
+
+@media only screen and (min-width: var(--bp-large)) {
+	.search-toggle {
+		display: inline-block;
+		padding: $search-toggle__padding;
+		margin: $search-toggle__margin;
+	}
+}

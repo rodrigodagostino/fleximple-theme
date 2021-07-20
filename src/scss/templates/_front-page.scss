@@ -1,0 +1,17 @@
+/*-----------------------------------------------
+
+ # Stylesheet: Front Page Template Stylesheet
+
+ ----------------------------------------------*/
+
+body.page-template-front-page {
+	.page-title {
+		// Display only for screen readers.
+		clip: rect(1px, 1px, 1px, 1px);
+		position: absolute !important;
+		height: 1px;
+		width: 1px;
+		overflow: hidden;
+		word-wrap: normal !important;
+	}
+}

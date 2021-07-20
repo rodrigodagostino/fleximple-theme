@@ -1,0 +1,115 @@
+/*-----------------------------------------------
+
+ # Stylesheet: Sidebar Stylesheet
+
+ ----------------------------------------------*/
+
+.sidebar {
+	background-color: $site-main__secondary-content__background-color;
+	padding: $site-main__secondary-content__padding;
+	margin: $site-main__secondary-content__margin;
+
+	& > * {
+		width: 100%;
+	}
+
+	.widget + .widget {
+		margin-top: var(--space-125);
+	}
+
+	.widget-title {
+		font-size: var(--text-125);
+	}
+}
+
+@media only screen and (max-width: calc(var(--site-main__width) - 1px)) {
+	.sidebar {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+@media only screen and (min-width: var(--bp-small)) {
+	.sidebar {
+		@if ($site-main__secondary-content__padding--small != null) {
+			padding: $site-main__secondary-content__padding--small;
+		}
+		@if ($site-main__secondary-content__margin--small != null) {
+			margin: $site-main__secondary-content__margin--small;
+		}
+	}
+}
+
+@media only screen and (min-width: var(--bp-medium)) and (max-width: calc(var(--bp-large) - 1px)) {
+	.sidebar > * {
+		width: calc(50% - var(--space-150) / 2);
+
+		&:nth-child(odd) {
+			margin-right: var(--space-150);
+		}
+	}
+}
+
+@media only screen and (min-width: var(--bp-medium)) {
+	.sidebar {
+		@if ($site-main__secondary-content__padding--medium != null) {
+			padding: $site-main__secondary-content__padding--medium;
+		}
+		@if ($site-main__secondary-content__margin--medium != null) {
+			margin: $site-main__secondary-content__margin--medium;
+		}
+	}
+}
+
+@media only screen and (min-width: $site-main__primary-content--has-secondary__breakpoint) {
+	.sidebar {
+		max-width: $site-main__primary-content__max-width;
+		@if ($site-main__secondary-content__padding--large != null) {
+			padding: $site-main__secondary-content__padding--large;
+		}
+		@if ($site-main__secondary-content__margin--large != null) {
+			margin: $site-main__secondary-content__margin--large;
+		}
+	}
+
+	.has-left-sidebar {
+		.site-main > .container {
+			display: flex;
+
+			& > .primary-content {
+				flex: 1;
+				z-index: 1;
+			}
+
+			& > .sidebar {
+				flex-basis: $site-main__secondary-content__width;
+				margin-right: var(--site-main__gap);
+			}
+		}
+
+		&.single .entry-header .entry-featured-media {
+			margin-left: 0;
+		}
+	}
+
+	.has-right-sidebar {
+		.site-main > .container {
+			display: flex;
+
+			& > .primary-content {
+				flex: 1;
+				z-index: 1;
+			}
+
+			& > .sidebar {
+				flex-basis: $site-main__secondary-content__width;
+				margin-left: var(--site-main__gap);
+			}
+		}
+
+		&.single .entry-header .entry-featured-media {
+			margin-right: 0;
+		}
+	}
+}

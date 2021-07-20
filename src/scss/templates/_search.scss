@@ -1,0 +1,25 @@
+/*-----------------------------------------------
+
+ # Stylesheet: Search Template Stylesheet
+
+ ----------------------------------------------*/
+
+body.search {
+}
+
+body.search-results {
+	.site-main {
+		.search-results-count {
+			font-size: $search-results__count__font-size;
+			margin: $search-results__count__margin;
+		}
+
+		.search-form + .hentry {
+			margin-top: var(--space-200);
+		}
+
+		.hentry {
+			flex-direction: row-reverse;
+		}
+	}
+}

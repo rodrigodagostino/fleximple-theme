@@ -1,0 +1,66 @@
+/*-----------------------------------------------
+
+ # Stylesheet: Typography Stylesheet
+
+ ----------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form legend {
+	font-family: var(--heading__font-family);
+	font-weight: var(--heading__font-weight);
+	color: var(--heading__color);
+	line-height: var(--heading__line-height);
+	letter-spacing: var(--heading__letter-spacing);
+	clear: both;
+}
+
+/* text size */
+.-text-3xlarge {
+	font-size: var(--text-250);
+}
+
+h1,
+.-text-2xlarge {
+	font-size: var(--heading-1__font-size);
+}
+
+h2,
+.-text-xlarge {
+	font-size: var(--heading-2__font-size);
+}
+
+h3,
+.-text-large {
+	font-size: var(--heading-3__font-size);
+}
+
+h4,
+.-text-medium {
+	font-size: var(--heading-4__font-size);
+}
+
+h5,
+.-text-small,
+small {
+	font-size: var(--heading-5__font-size);
+}
+
+h6,
+.-text-xsmall {
+	font-size: var(--heading-6__font-size);
+}
+
+::-moz-selection {
+	color: var(--text-selection__color);
+	background: var(--text-selection__background-color);
+}
+
+::selection {
+	color: var(--text-selection__color);
+	background: var(--text-selection__background-color);
+}

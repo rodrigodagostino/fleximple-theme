@@ -86,7 +86,7 @@ if ( ! function_exists( 'fleximpletheme_entry_categories' ) ) :
 	function fleximpletheme_entry_categories() {
 		// Hide category text for pages.
 		if ( 'post' === get_post_type() ) {
-			$categories = get_the_category( $post->ID );
+			$categories = get_the_category();
 			$categories_list = '';
 			foreach ( $categories as $category ) {
 				$categories_list .= '<a class="entry-category" href="'. esc_url( get_category_link( $category->term_id ) ) .'" rel="category" data-category-slug="'. esc_html( $category->slug ) .'">'. esc_html( $category->name ) .'</a>';

@@ -12,83 +12,108 @@
 
 .collapsible-navigation {
 	.search-form {
-		padding: $search-form__padding--collapsible;
-		margin: $search-form__margin--collapsible;
+		padding: $search-bar-form__padding--collapsible;
+		margin: $search-bar-form__margin--collapsible;
 
 		.search-field {
-			font-size: $search-form__input__font-size--collapsible;
-			color: $search-form__input__color--collapsible;
-			background-color: $search-form__input__background-color--collapsible;
-			padding: $search-form__input__padding--collapsible;
-			margin: $search-form__input__margin--collapsible;
+			font-size: $search-bar-form__input__font-size--collapsible;
+			color: $search-bar-form__input__color--collapsible;
+			background-color: $search-bar-form__input__background-color--collapsible;
+			@if ($search-bar-form__input__border-top--collapsible != null) {
+				border-top: $search-bar-form__input__border-top--collapsible;
+			}
+			@if ($search-bar-form__input__border-right--collapsible != null) {
+				border-right: $search-bar-form__input__border-right--collapsible;
+			}
+			@if ($search-bar-form__input__border-bottom--collapsible != null) {
+				border-bottom: $search-bar-form__input__border-bottom--collapsible;
+			}
+			@if ($search-bar-form__input__border-left--collapsible != null) {
+				border-left: $search-bar-form__input__border-left--collapsible;
+			}
+			padding: $search-bar-form__input__padding--collapsible;
+			margin: $search-bar-form__input__margin--collapsible;
 
 			&::placeholder {
-				color: $search-form__input__placeholder-color--collapsible;
+				color: $search-bar-form__input__placeholder-color--collapsible;
 			}
 
 			&:focus {
-				background-color: $search-form__input__background-color--focus--collapsible;
+				background-color: $search-bar-form__input__background-color--focus--collapsible;
+				@if ($search-bar-form__input__border-top--focus--collapsible != null) {
+					border-top: $search-bar-form__input__border-top--focus--collapsible;
+				}
+				@if ($search-bar-form__input__border-right--focus--collapsible != null) {
+					border-right: $search-bar-form__input__border-right--focus--collapsible;
+				}
+				@if ($search-bar-form__input__border-bottom--focus--collapsible != null) {
+					border-bottom: $search-bar-form__input__border-bottom--focus--collapsible;
+				}
+				@if ($search-bar-form__input__border-left--focus--collapsible != null) {
+					border-left: $search-bar-form__input__border-left--focus--collapsible;
+				}
 			}
 		}
 
 		.search-submit {
-			color: $search-form__button__color--collapsible;
-			background-color: $search-form__button__background-color--collapsible;
-			padding: $search-form__button__padding--collapsible;
+			color: $search-bar-form__button__color--collapsible;
+			background-color: $search-bar-form__button__background-color--collapsible;
+			border-radius: $search-bar-form__button__border-radius--collapsible;
+			padding: $search-bar-form__button__padding--collapsible;
 
 			.magnifying-glass-icon {
-				height: $search-form__button__icon__font-size--collapsible;
+				height: $search-bar-form__button__icon__font-size--collapsible;
 
 				.magnifying-glass-icon__glass {
-					stroke: $search-form__button__color--collapsible;
+					stroke: $search-bar-form__button__color--collapsible;
 				}
 
 				.magnifying-glass-icon__handle {
-					fill: $search-form__button__color--collapsible;
+					fill: $search-bar-form__button__color--collapsible;
 				}
 			}
 
 			&:hover {
-				color: $search-form__button__color--hover;
-				background-color: $search-form__button__background-color--hover--collapsible;
+				color: $search-bar-form__button__color--hover--collapsible;
+				background-color: $search-bar-form__button__background-color--hover--collapsible;
 
 				.magnifying-glass-icon {
 					.magnifying-glass-icon__glass {
-						stroke: $search-form__button__color--hover--collapsible;
+						stroke: $search-bar-form__button__color--hover--collapsible;
 					}
 
 					.magnifying-glass-icon__handle {
-						fill: $search-form__button__color--hover--collapsible;
+						fill: $search-bar-form__button__color--hover--collapsible;
 					}
 				}
 			}
 
 			&:focus {
-				color: $search-form__button__color--focus--collapsible;
-				background-color: $search-form__button__background-color--focus--collapsible;
+				color: $search-bar-form__button__color--focus--collapsible;
+				background-color: $search-bar-form__button__background-color--focus--collapsible;
 
 				.magnifying-glass-icon {
 					.magnifying-glass-icon__glass {
-						stroke: $search-form__button__color--focus--collapsible;
+						stroke: $search-bar-form__button__color--focus--collapsible;
 					}
 
 					.magnifying-glass-icon__handle {
-						fill: $search-form__button__color--focus--collapsible;
+						fill: $search-bar-form__button__color--focus--collapsible;
 					}
 				}
 			}
 
 			&:active {
-				color: $search-form__button__color--active;
-				background-color: $search-form__button__background-color--active--collapsible;
+				color: $search-bar-form__button__color--active--collapsible;
+				background-color: $search-bar-form__button__background-color--active--collapsible;
 
 				.magnifying-glass-icon {
 					.magnifying-glass-icon__glass {
-						stroke: $search-form__button__color--active--collapsible;
+						stroke: $search-bar-form__button__color--active--collapsible;
 					}
 
 					.magnifying-glass-icon__handle {
-						fill: $search-form__button__color--active--collapsible;
+						fill: $search-bar-form__button__color--active--collapsible;
 					}
 				}
 			}
@@ -107,9 +132,9 @@
 @media only screen and (min-width: var(--bp-large)) {
 	.site-navigation {
 		.search-container {
-			background-color: $search-container__background-color;
-			padding: $search-container__padding;
-			margin: $search-container__margin;
+			background-color: $search-bar-container__background-color;
+			padding: $search-bar-container__padding;
+			margin: $search-bar-container__margin;
 			display: block;
 			visibility: hidden;
 			opacity: 0;
@@ -128,47 +153,72 @@
 			}
 
 			.search-form {
-				padding: $search-form__padding--site;
-				margin: $search-form__margin--site;
+				padding: $search-bar-form__padding--site;
+				margin: $search-bar-form__margin--site;
 
 				.search-field {
-					font-size: $search-form__input__font-size--site;
-					color: $search-form__input__color--site;
-					background-color: $search-form__input__background-color--site;
-					padding: $search-form__input__padding--site;
-					margin: $search-form__input__margin--site;
+					font-size: $search-bar-form__input__font-size--site;
+					color: $search-bar-form__input__color--site;
+					background-color: $search-bar-form__input__background-color--site;
+					@if ($search-bar-form__input__border-top--site != null) {
+						border-top: $search-bar-form__input__border-top--site;
+					}
+					@if ($search-bar-form__input__border-right--site != null) {
+						border-right: $search-bar-form__input__border-right--site;
+					}
+					@if ($search-bar-form__input__border-bottom--site != null) {
+						border-bottom: $search-bar-form__input__border-bottom--site;
+					}
+					@if ($search-bar-form__input__border-left--site != null) {
+						border-left: $search-bar-form__input__border-left--site;
+					}
+					padding: $search-bar-form__input__padding--site;
+					margin: $search-bar-form__input__margin--site;
 
 					&::placeholder {
-						color: $search-form__input__placeholder-color--site;
+						color: $search-bar-form__input__placeholder-color--site;
 					}
 
 					&:focus {
-						background-color: $search-form__input__background-color--focus--site;
+						background-color: $search-bar-form__input__background-color--focus--site;
+						@if ($search-bar-form__input__border-top--focus--site != null) {
+							border-top: $search-bar-form__input__border-top--focus--site;
+						}
+						@if ($search-bar-form__input__border-right--focus--site != null) {
+							border-right: $search-bar-form__input__border-right--focus--site;
+						}
+						@if ($search-bar-form__input__border-bottom--focus--site != null) {
+							border-bottom: $search-bar-form__input__border-bottom--focus--site;
+						}
+						@if ($search-bar-form__input__border-left--focus--site != null) {
+							border-left: $search-bar-form__input__border-left--focus--site;
+						}
 					}
 				}
 
 				.search-submit {
-					color: $search-form__button__color--site;
-					background-color: $search-form__button__background-color--site;
-					padding: $search-form__button__padding--site;
+					color: $search-bar-form__button__color--site;
+					background-color: $search-bar-form__button__background-color--site;
+					border-radius: $search-bar-form__button__border-radius--site;
+					padding: $search-bar-form__button__padding--site;
 
 					i {
-						font-size: $search-form__button__icon__font-size--site;
+						font-size: $search-bar-form__button__icon__font-size--site;
 					}
 
 					&:hover {
-						color: $search-form__button__color--hover--site;
-						background-color: $search-form__button__background-color--hover--site;
+						color: $search-bar-form__button__color--hover--site;
+						background-color: $search-bar-form__button__background-color--hover--site;
 					}
 
 					&:focus {
-						color: $search-form__button__color--focus--site;
-						background-color: $search-form__button__background-color--focus--site;
+						color: $search-bar-form__button__color--focus--site;
+						background-color: $search-bar-form__button__background-color--focus--site;
 					}
 
 					&:active {
-						color: $search-form__button__color--active--site;
-						background-color: $search-form__button__background-color--active--site;
+						color: $search-bar-form__button__color--active--site;
+						background-color: $search-bar-form__button__background-color--active--site;
 					}
 				}
 			}

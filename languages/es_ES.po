@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Fleximple Theme 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/fleximple-theme\n"
 "POT-Creation-Date: 2021-07-28T22:21:28+02:00\n"
-"PO-Revision-Date: 2021-07-28 17:21-0300\n"
+"PO-Revision-Date: 2021-07-28 18:03-0300\n"
 "Last-Translator: Rodrigo D’Agostino <rodrigo.dagostino@gmail.com>\n"
 "Language-Team: \n"
 "Language: es\n"
@@ -77,71 +77,71 @@ msgstr "Área de widgets 2 del pié de página"
 
 #: functions.php:93
 msgid "Lighter Primary"
-msgstr ""
+msgstr "Primario más claro"
 
 #: functions.php:98
 msgid "Light Primary"
-msgstr "`"
+msgstr "Primario claro"
 
 #: functions.php:103
 msgid "Primary"
-msgstr ""
+msgstr "Primario"
 
 #: functions.php:108
 msgid "Dark Primary"
-msgstr ""
+msgstr "Primario oscuro"
 
 #: functions.php:113
 msgid "Darker Primary"
-msgstr ""
+msgstr "Primario más oscuro"
 
 #: functions.php:118
 msgid "Lighter Accent"
-msgstr ""
+msgstr "Énfasis más claro"
 
 #: functions.php:123
 msgid "Light Accent"
-msgstr ""
+msgstr "Énfasis claro"
 
 #: functions.php:128
 msgid "Accent"
-msgstr ""
+msgstr "Énfasis"
 
 #: functions.php:133
 msgid "Dark Accent"
-msgstr ""
+msgstr "Énfasis oscuro"
 
 #: functions.php:138
 msgid "Darker Accent"
-msgstr ""
+msgstr "Énfasis más oscuro"
 
 #: functions.php:143
 msgid "Lighter Gray"
-msgstr ""
+msgstr "Gris más claro"
 
 #: functions.php:148
 msgid "Light Gray"
-msgstr ""
+msgstr "Gris claro"
 
 #: functions.php:153
 msgid "Gray"
-msgstr ""
+msgstr "Gris"
 
 #: functions.php:158
 msgid "Dark Gray"
-msgstr ""
+msgstr "Gris oscuro"
 
 #: functions.php:163
 msgid "Darker Gray"
-msgstr ""
+msgstr "Gris más oscuro"
 
 #: functions.php:168
 msgid "White"
-msgstr ""
+msgstr "Blanco"
 
 #: functions.php:173
 msgid "Black"
-msgstr ""
+msgstr "Negro"
 
 #: functions/customizer.php:29
 msgid "Layout"

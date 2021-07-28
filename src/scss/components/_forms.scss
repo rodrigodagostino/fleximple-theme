@@ -17,7 +17,9 @@ input[type="submit"] {
 	background-color: $button__background-color;
 	border: none;
 	border-radius: $button__border-radius;
-	box-shadow: $button__box-shadow;
+	@if ($button__box-shadow != null) {
+		box-shadow: $button__box-shadow;
+	}
 	padding: $button__padding;
 	transition: color 0.2s ease, background-color 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
 	-webkit-appearance: none;
@@ -26,20 +28,26 @@ input[type="submit"] {
 	&:hover {
 		color: $button__color--hover;
 		background-color: $button__background-color--hover;
-		box-shadow: $button__box-shadow--hover;
+		@if ($button__box-shadow--hover != null) {
+			box-shadow: $button__box-shadow--hover;
+		}
 	}
 
 	&:focus {
 		color: $button__color--focus;
 		background-color: $button__background-color--focus;
-		box-shadow: $button__box-shadow--focus;
+		@if ($button__box-shadow--focus != null) {
+			box-shadow: $button__box-shadow--focus;
+		}
 		outline: none;
 	}
 
 	&:active {
 		color: $button__color--active;
 		background-color: $button__background-color--active;
-		box-shadow: $button__box-shadow--active;
+		@if ($button__box-shadow--active != null) {
+			box-shadow: $button__box-shadow--active;
+		}
 	}
 
 	&:disabled,
@@ -163,6 +171,8 @@ textarea:not(.editor-post-title__input):not(.editor-default-block-appender__cont
 .search-form {
 	display: flex;
 	position: relative;
+	padding: $search-form__padding;
+	margin: $search-form__margin;
 
 	label {
 		flex: 1;
@@ -277,5 +287,5 @@ textarea:not(.editor-post-title__input):not(.editor-default-block-appender__cont
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 105;
+	z-index: 50;
 }

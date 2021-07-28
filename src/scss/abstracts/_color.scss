@@ -6,7 +6,7 @@
 
 :root {
 	/* Primary colors */
-	--color-primary: #0080ff;
+	--color-primary: #5468ff;
 	--color-primary--lightest: color-mod(var(--color-primary) tint(45%));
 	--color-primary--lighter: color-mod(var(--color-primary) tint(30%));
 	--color-primary--light: color-mod(var(--color-primary) tint(15%));
@@ -15,7 +15,7 @@
 	--color-primary--darkest: color-mod(var(--color-primary) shade(45%));
 
 	/* Accent colors */
-	--color-accent: #ff2800;
+	--color-accent: #f4495d;
 	--color-accent--lightest: color-mod(var(--color-accent) tint(45%));
 	--color-accent--lighter: color-mod(var(--color-accent) tint(30%));
 	--color-accent--light: color-mod(var(--color-accent) tint(15%));

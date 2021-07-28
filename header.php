@@ -33,15 +33,21 @@
 
 		<?php
 		$header_classes = array();
-		get_theme_mod( 'header_layout' ) ? $header_classes[] = 'is-' . get_theme_mod( 'header_layout' ) : null;
-		get_theme_mod( 'header_behavior' ) && 'static' !== get_theme_mod( 'header_behavior' ) ? $header_classes[] = 'is-' . get_theme_mod( 'header_behavior' ) : null;
+		$header_classes[] = 'is-' . get_theme_mod( 'header_layout', 'default' );
+		$header_classes[] = 'is-' . get_theme_mod( 'header_behavior', 'static' );
 		?>
 
 		<header id="header" class="site-header<?php if ( ! empty( $header_classes ) ) { echo ' '. join( ' ', $header_classes ); } ?>">
 			<div class="container">
-				<?php if ( get_theme_mod( 'header_layout' ) === 'custom' && file_exists( get_stylesheet_directory() . '/template-parts/custom-navigation.php' ) ) {
+				<?php if (
+					get_theme_mod( 'header_layout' ) === 'custom' &&
+					file_exists( get_stylesheet_directory() . '/template-parts/custom-navigation.php' )
+				) {
 					get_template_part( 'template-parts/custom-navigation' );
-				} else if ( get_theme_mod( 'header_layout' ) === 'custom' && ! file_exists( get_stylesheet_directory() . '/template-parts/custom-navigation.php' ) ) {
+				} else if (
+					get_theme_mod( 'header_layout' ) === 'custom' &&
+					!file_exists( get_stylesheet_directory() . '/template-parts/custom-navigation.php' ) 
+				) {
 					_e( 'You have chosen to use a custom header layout, but the <code>custom-navigation.php</code> file was not found. You can either select a different header layout or create a custom layout in <code>template-parts/custom-navigation.php</code>.', 'fleximpletheme' );
 				} else {
 					get_template_part( 'template-parts/navigation' );

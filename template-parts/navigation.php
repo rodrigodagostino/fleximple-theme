@@ -47,17 +47,11 @@
 	</div><!-- .site-navigation__top -->
 
 	<div class="site-navigation__bottom">
-		<?php if ( get_theme_mod( 'header_search_field' ) ) { ?>
-			<div class="search-container--mobile">
-				<?php get_search_form(); ?>
-			</div>
-		<?php } ?>
-
 		<?php if ( has_nav_menu( 'main-menu-location' ) ) {
 			fleximpletheme_main_menu();
 		} ?>
 
-		<?php if ( get_theme_mod( 'header_search_field' ) ) { ?>
+		<?php if ( get_theme_mod( 'header_search_field', 1 ) ) { ?>
 			<button class="search-toggle" aria-pressed="false" aria-expanded="false">
 				<span class="search-toggle-label sr-only"><?php echo _x( 'Display search bar', 'toggle button', 'fleximpletheme' ); ?></span>
 				<span class="search-toggle__glass" aria-hidden="true"></span>
@@ -66,10 +60,28 @@
 			</button>
 		<?php } ?>
 
-		<?php if ( get_theme_mod( 'header_search_field' ) ) { ?>
+		<?php if ( get_theme_mod( 'header_search_field', 1 ) ) { ?>
 			<div class="search-container" aria-hidden="true">
 				<?php get_search_form(); ?>
 			</div>
 		<?php } ?>
 	</div><!-- .site-navigation__bottom -->
 </nav><!-- .site-navigation -->
+
+<nav id="collapsible-nav" class="collapsible-navigation <?php echo 'is-'. get_theme_mod( 'collapsible_menu_position', 'absolute' ) ?> is-hidden" aria-label="<?php _e( 'Collapsible navigation', 'radiofueguinatheme' ); ?>">
+	<?php if ( has_nav_menu( 'live-menu-location' ) ) {
+		radiofueguinatheme_live_menu();
+	}
+
+	if ( get_theme_mod( 'header_search_field', 1 ) ) {
+		get_search_form();
+	}
+
+	if ( has_nav_menu( 'main-menu-location' ) ) {
+		fleximpletheme_main_menu();
+	}
+
+	if ( has_nav_menu( 'top-menu-location' ) ) {
+		fleximpletheme_top_menu();
+	} ?>
+</nav><!-- .collapsible-navigation -->

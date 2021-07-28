@@ -8,7 +8,10 @@
 ?>
 
 <?php
-if ( is_active_sidebar( 'sidebar' ) && get_theme_mod( 'sidebar_layout' ) && get_theme_mod( 'sidebar_layout' ) !== 'no-sidebar' ) : ?>
+if (
+	is_active_sidebar( 'sidebar' ) &&
+	get_theme_mod( 'sidebar_layout', 'no-sidebar' ) !== 'no-sidebar'
+) : ?>
 	<aside id="secondary-content" class="secondary-content sidebar widget-area" role="complementary">
 		<?php dynamic_sidebar( 'sidebar' ); ?>
 	</aside><!-- .secondary-content .sidebar .widget-area -->

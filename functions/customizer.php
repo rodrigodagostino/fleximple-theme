@@ -166,8 +166,11 @@ function fleximpletheme_customize_partial_blogdescription() {
  */
 function fleximpletheme_customizer_body_classes( $classes ) {
 	// Sidebar Layout.
-	if ( get_theme_mod( 'sidebar_layout' ) !== 'no-sidebar' && ! is_page_template( 'page-templates/front-page.php' ) ) {
-		$classes[] = 'has-' . get_theme_mod( 'sidebar_layout' );
+	if (
+		get_theme_mod( 'sidebar_layout', 'no-sidebar' ) !== 'no-sidebar' &&
+		! is_page_template( 'page-templates/front-page.php' )
+	) {
+		$classes[] = 'has-' . get_theme_mod( 'sidebar_layout', 'no-sidebar' );
 	}
 	return $classes;
 }

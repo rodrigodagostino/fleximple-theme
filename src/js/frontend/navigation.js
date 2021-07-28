@@ -10,40 +10,30 @@
 	const mainNav = document.querySelector( '#main-nav' )
 	const collapsibleNav = document.querySelector( '#collapsible-nav' )
 
-	if ( ! mainNav ) {
+	if ( !mainNav ) {
 		console.warn( 'There is no navigation container' )
-		return
 	}
 
 	const menuToggle = mainNav.querySelector( '.menu-toggle' )
-	if ( 'undefined' === typeof menuToggle ) {
-		return
-	}
-
-	const searchToggle = mainNav.querySelector( '.search-toggle' )
-	if ( 'undefined' === typeof searchToggle ) {
-		return
-	}
-
-	const mainNavLinks = mainNav.querySelectorAll( '.main-menu a' )
-	const search = mainNav.querySelector( '.search-container' )
 
 	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof collapsibleNav ) {
+	if ( !collapsibleNav && menuToggle ) {
 		menuToggle.style.display = 'none'
-		return
 	}
+
+	const search = mainNav.querySelector( '.search-container' )
+	const searchToggle = mainNav.querySelector( '.search-toggle' )
 
 	// Hide menu toggle button if search is empty and return early.
-	if ( 'undefined' === typeof search ) {
+	if ( !search && searchToggle ) {
 		searchToggle.style.display = 'none'
-		return
 	}
 
-	// collapsibleNav.setAttribute( 'aria-hidden', 'false' );
 	if ( search ) {
 		search.setAttribute( 'aria-hidden', 'true' )
 	}
+
+	const mainNavLinks = mainNav.querySelectorAll( '.main-menu a' )
 
 	const openCollapsibleNav = () => {
 		menuToggle.classList.add( 'is-active' )
@@ -65,11 +55,11 @@
 		collapsibleNav.setAttribute( 'aria-expanded', 'false' )
 	}
 
-	const createBackdrop = ( callback ) => {
+	const createBackdrop = callback => {
 		document.body.classList.add( 'is-scroll-locked' )
 		const backdrop = document.createElement( 'div' )
 		backdrop.classList.add( 'backdrop', 'animate-fade-in' )
-		header.appendChild( backdrop )
+		document.body.appendChild( backdrop )
 		setTimeout( () => backdrop.classList.add( 'is-faded-in' ), 10 ) // Allows for the fading-in animation to run properly.
 		backdrop.addEventListener( 'click', () => {
 			removeBackdrop()
@@ -79,20 +69,18 @@
 
 	const removeBackdrop = () => {
 		document.body.classList.remove( 'is-scroll-locked' )
-		const backdrop = header.querySelector( '.backdrop' )
+		const backdrop = document.body.querySelector( '.backdrop' )
 		backdrop.classList.remove( 'is-faded-in' )
 		setTimeout( () => backdrop.remove(), 240 )
 	}
 
 	if ( menuToggle ) {
 		menuToggle.onclick = function () {
-			if ( ! collapsibleNav.classList.contains( 'is-expanded' ) ) {
-				if ( collapsibleNav.classList.contains( 'is-fixed' ) )
-					createBackdrop( closeCollapsibleNav )
+			if ( !collapsibleNav.classList.contains( 'is-expanded' ) ) {
+				createBackdrop( closeCollapsibleNav )
 				openCollapsibleNav()
 			} else {
-				if ( collapsibleNav.classList.contains( 'is-fixed' ) )
-					removeBackdrop()
+				removeBackdrop()
 				closeCollapsibleNav()
 			}
 		}
@@ -116,7 +104,7 @@
 
 	if ( search ) {
 		searchToggle.onclick = function () {
-			if ( ! search.classList.contains( 'is-expanded' ) ) {
+			if ( !search.classList.contains( 'is-expanded' ) ) {
 				openSearch()
 				createBackdrop( closeSearch )
 			} else {
@@ -135,7 +123,7 @@
 			'.submenu-toggle',
 		)
 		submenuToggle.addEventListener( 'click', function () {
-			if ( ! itemsWithChildren[ i ].classList.contains( 'is-expanded' ) ) {
+			if ( !itemsWithChildren[ i ].classList.contains( 'is-expanded' ) ) {
 				itemsWithChildren[ i ].classList.add( 'is-expanded' )
 				submenuToggle.setAttribute( 'aria-pressed', 'true' )
 				submenuToggle.setAttribute( 'aria-expanded', 'true' )
@@ -247,7 +235,7 @@
 		const searchField = searchForm.querySelector( '.search-field' )
 		const tooltip = searchForm.querySelector( '.tooltip' )
 		// Prevent form execution if the search input field is empty and display a tooltip warning the user.
-		searchForm.addEventListener( 'submit', ( e ) => {
+		searchForm.addEventListener( 'submit', e => {
 			if ( searchField.value.trim() === '' ) {
 				e.preventDefault()
 				// Display error message.

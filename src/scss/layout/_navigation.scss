@@ -84,7 +84,7 @@ h6 {
 	@import "navigation/menu-toggle";
 	@import "navigation/search-toggle";
 
-	.site-navigation__top {
+	&__top {
 		display: flex;
 		align-items: center;
 		background-color: $site-nav__top__background-color;
@@ -100,7 +100,7 @@ h6 {
 		}
 	}
 
-	.site-navigation__bottom {
+	&__bottom {
 		display: none;
 		background-color: $site-nav__bottom__background-color;
 		padding: $site-nav__bottom__padding;

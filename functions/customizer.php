@@ -81,8 +81,8 @@ function fleximpletheme_customize_register( $wp_customize ) {
 		'priority'		=> 10, // Optional. Order priority to load the control. Default: 10
 		'type'			=> 'select',
 		'choices'		=> array(
-			'top'			=> __( 'Top of the page', 'fleximpletheme' ),
-			'below-hero'	=> __( 'Below the hero', 'fleximpletheme' ),
+			'top'				=> __( 'Top of the page', 'fleximpletheme' ),
+			'below-the-fold'	=> __( 'Below the fold', 'fleximpletheme' ),
 		),
 		'capability'	=> 'edit_theme_options', // Optional. Default: 'edit_theme_options'
 	) );

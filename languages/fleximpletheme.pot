@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-04-12T05:42:26+02:00\n"
+"POT-Creation-Date: 2021-07-28T22:21:28+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.4.0\n"
+"X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: fleximpletheme\n"
 
 #. Theme Name of the theme
@@ -184,7 +184,7 @@ msgid "Top of the page"
 msgstr ""
 
 #: functions/customizer.php:85
-msgid "Below the hero"
+msgid "Below the fold"
 msgstr ""
 
 #: functions/customizer.php:96
@@ -304,11 +304,11 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: header.php:31
+#: header.php:32
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:44
+#: header.php:51
 msgid "You have chosen to use a custom header layout, but the <code>custom-navigation.php</code> file was not found. You can either select a different header layout or create a custom layout in <code>template-parts/custom-navigation.php</code>."
 msgstr ""
 
@@ -394,7 +394,7 @@ msgctxt "toggle button"
 msgid "Display menu"
 msgstr ""
 
-#: template-parts/navigation.php:62
+#: template-parts/navigation.php:56
 msgctxt "toggle button"
 msgid "Display search bar"
 msgstr ""

@@ -4,15 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fleximple Theme 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/fleximple-theme\n"
-"POT-Creation-Date: 2021-04-12T05:42:26+02:00\n"
-"PO-Revision-Date: 2021-04-12 00:43-0300\n"
+"POT-Creation-Date: 2021-07-28T22:21:28+02:00\n"
+"PO-Revision-Date: 2021-07-28 17:21-0300\n"
 "Last-Translator: Rodrigo D’Agostino <rodrigo.dagostino@gmail.com>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0\n"
 "X-Domain: fleximpletheme\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -192,9 +192,8 @@ msgid "Top of the page"
 msgstr "Inicio de la página"
 
 #: functions/customizer.php:85
-#, fuzzy
-msgid "Below the hero"
-msgstr "Debajo del héroe"
+msgid "Below the fold"
+msgstr "Debajo del pliegue"
 
 #: functions/customizer.php:96
 msgid "Collapsible Menu Position"
@@ -313,11 +312,11 @@ msgstr "Compartir por correo"
 msgid "Tags"
 msgstr "Etiquetas"
 
-#: header.php:31
+#: header.php:32
 msgid "Skip to content"
 msgstr "Saltar al contenido"
 
-#: header.php:44
+#: header.php:51
 msgid ""
 "You have chosen to use a custom header layout, but the <code>custom-"
 "navigation.php</code> file was not found. You can either select a different "
@@ -420,7 +419,7 @@ msgctxt "toggle button"
 msgid "Display menu"
 msgstr "Mostrar menú"
 
-#: template-parts/navigation.php:62
+#: template-parts/navigation.php:56
 msgctxt "toggle button"
 msgid "Display search bar"
 msgstr "Mostrar barra de búsqueda"

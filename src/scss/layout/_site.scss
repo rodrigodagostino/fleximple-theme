@@ -149,22 +149,14 @@
 		display: flex;
 		font-size: var(--text-125);
 
-		.entry-share-button + .entry-share-button {
-			margin-left: var(--space-075);
+		.entry-share-button {
+			a {
+				padding: var(--space-025);
+			}
 		}
 	}
 }
 
 .updated:not(.published) {
 	display: none;
-}
-
-@media only screen and (min-width: var(--bp-xlarge)) {
-	.hentry {
-		.entry-share-buttons {
-			.entry-share-button + .entry-share-button {
-				margin-left: 0;
-			}
-		}
-	}
 }

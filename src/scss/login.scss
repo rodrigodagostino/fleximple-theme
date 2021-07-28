@@ -33,8 +33,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: url(../assets/images/login-background.jpg);
-	background-size: cover;
+	background-color: var(--gray-050);
 
 	#login {
 		padding: 0;

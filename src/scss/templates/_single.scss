@@ -6,6 +6,7 @@
 
 body.single,
 body.page:not(.page-template-front-page),
+body.search,
 body.error404 {
 	.entry-content,
 	.page-content {
@@ -151,7 +152,9 @@ body.page:not(.page-template-front-page) {
 	}
 
 	.entry-comments-title {
-		font-family: $single__entry-comments-title__font-family;
+		@if ($single__entry-comments-title__font-family != null) {
+			font-family: $single__entry-comments-title__font-family;
+		}
 		font-size: $single__entry-comments-title__font-size;
 		font-weight: $single__entry-comments-title__font-weight;
 	}

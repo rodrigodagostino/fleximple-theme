@@ -1,6 +1,6 @@
 {
 	"name": "fleximple-theme",
-	"version": "0.5.0",
+	"version": "1.0.0",
 	"description": "The “Fleximple Theme” designed for WordPress",
 	"main": "dist/scripts.js",
 	"scripts": {

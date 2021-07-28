@@ -19,5 +19,7 @@ The Fleximple Theme currently has support for the following languages:
 If you want to contribute with a different translation, you’re more than welcome to do so 😉.
 
 ## Changelog
+### 1.0.0
+- First production-ready release
 ### 0.5.0
 - Initial release

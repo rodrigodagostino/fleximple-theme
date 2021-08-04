@@ -5,7 +5,7 @@
 	"main": "dist/scripts.js",
 	"scripts": {
 		"build": "webpack --mode=production",
-		"makejson": "wp i18n make-json languages/fleximpletheme-es_ES.po --no-purge",
+		"makejson": "wp i18n make-json languages/es_ES.po --no-purge",
 		"makepot": "wp i18n make-pot ./ languages/fleximpletheme.pot",
 		"start": "webpack --mode=development --watch"
 	},

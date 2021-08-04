@@ -32,10 +32,10 @@ const PostKickerMetaBox = () => {
 	return (
 		<PluginDocumentSettingPanel
 			name='post-kicker-meta-box'
-			title={ __( 'Kicker', 'fleximpleblocks' ) }
+			title={ __( 'Kicker', 'fleximpletheme' ) }
 		>
 			<TextControl
-				label={ __( 'Write a kicker (optional)', 'fleximpleblocks' ) }
+				label={ __( 'Write a kicker', 'fleximpletheme' ) }
 				value={ kickerValue }
 				onChange={ setKickerValue }
 			/>

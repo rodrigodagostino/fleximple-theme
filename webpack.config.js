@@ -6,12 +6,13 @@ const postcssAtVariables = require( 'postcss-at-rules-variables' )
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' )
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' )
 const IgnoreEmitPlugin = require( 'ignore-emit-webpack-plugin' )
+const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' )
 
 const config = {
 	entry: {
 		// 'admin-script': path.resolve( process.cwd(), 'src/js', 'admin.js' ),
 		'customizer-script': path.resolve( process.cwd(), 'src/js', 'customizer.js' ),
-		// 'editor-script': path.resolve( process.cwd(), 'src/js', 'editor.js' ),
+		'editor-script': path.resolve( process.cwd(), 'src/js', 'editor.js' ),
 		script: path.resolve( process.cwd(), 'src/js', 'script.js' ),
 		'editor-style': path.resolve( process.cwd(), 'src/scss', 'editor.scss' ),
 		'login-style': path.resolve( process.cwd(), 'src/scss', 'login.scss' ),
@@ -125,6 +126,7 @@ const config = {
 			filename: '[name].css',
 		} ),
 		new IgnoreEmitPlugin( [ 'style.js' ] ),
+		new DependencyExtractionWebpackPlugin( { injectPolyfill: true } ),
 	],
 }
 

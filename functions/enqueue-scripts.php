@@ -99,6 +99,7 @@ add_action( 'wp_enqueue_scripts', 'fleximpletheme_enqueue_assets', 10 );
  * Enqueue editor fonts and styles.
  */
 function fleximpletheme_enqueue_editor_assets() {
+	// Fonts
 	wp_enqueue_style(
 		'theme-editor-google-fonts',
 		fleximpletheme_google_fonts_url(),
@@ -106,6 +107,16 @@ function fleximpletheme_enqueue_editor_assets() {
 		null
 	);
 
+	// Scripts
+	wp_enqueue_script(
+		'theme-editor-scripts',
+		get_template_directory_uri() . '/dist/editor-script.js',
+		array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor', 'wp-components' ),
+		date( 'Ymd.His', filemtime( get_template_directory() . '/dist/editor-script.js' ) ),
+		true
+	);
+
+	// Styles
 	wp_enqueue_style(
 		'theme-editor-styles',
 		get_template_directory_uri() . '/dist/editor-style.css',

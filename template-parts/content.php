@@ -14,12 +14,21 @@
 	<header class="entry-header">
 		<?php fleximpletheme_entry_categories(); ?>
 
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+		<?php if ( is_singular() ) : ?>
+			<h1 class="entry-title">
+				<?php if ( get_post_meta( $post->ID, 'kicker', true ) ) {
+					?><span class="entry-kicker"><?php echo get_post_meta( $post->ID, 'kicker', true ); ?></span><?php
+				} ?><span class="entry-heading"><?php echo get_the_title( $post->ID ); ?></span>
+			</h1>
+		<?php else : ?>
+			<h2 class="entry-title">
+				<a href="<?php esc_url( get_permalink() ); ?>" rel="bookmark">
+					<?php if ( get_post_meta( $post->ID, 'kicker', true ) ) {
+						?><span class="entry-kicker"><?php echo get_post_meta( $post->ID, 'kicker', true ); ?></span><?php
+					} ?><span class="entry-heading"><?php echo get_the_title( $post->ID ); ?></span>
+				</a>
+			</h2>
+		<?php endif;
 
 		if ( 'post' === get_post_type() ) {
 			fleximpletheme_posted_on();
@@ -32,8 +41,7 @@
 		<?php fleximpletheme_post_thumbnail(); ?>
 
 		<div class="entry-meta-share-buttons-wrapper">
-			<?php if ( 'post' === get_post_type() ) { fleximpletheme_posted_on(); }
-			fleximpletheme_entry_share_buttons(); ?>
+			<?php fleximpletheme_entry_share_buttons(); ?>
 		</div>
 	</header><!-- .entry-header -->
 

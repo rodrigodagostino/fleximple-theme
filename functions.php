@@ -287,3 +287,6 @@ require get_template_directory() . '/functions/template-functions.php';
 
 // Customizer additions.
 require get_template_directory() . '/functions/customizer.php';
+
+// Register custom fields.
+require get_template_directory() . '/functions/custom-fields.php';

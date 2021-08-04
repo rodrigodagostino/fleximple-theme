@@ -16,8 +16,15 @@
 	</div><!-- .entry-media -->
 
 	<div class="entry-content">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+		<h2 class="entry-title">
+			<a href="<?php the_permalink(); ?>" rel="bookmark">
+				<?php if ( get_post_meta( $post->ID, 'kicker', true ) ) {
+					?><span class="entry-kicker"><?php echo get_post_meta( $post->ID, 'kicker', true ); ?></span><?php
+				} ?><span class="entry-heading"><?php echo get_the_title( $post->ID ); ?></span>
+			</a>
+		</h2>
 
+		<?php
 		if ( 'post' === get_post_type() ) {
 			fleximpletheme_posted_on();
 		} ?>

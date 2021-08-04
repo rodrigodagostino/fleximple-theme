@@ -7,6 +7,8 @@ module.exports = {
 	},
 	extends: [
 		'eslint:recommended',
+		'plugin:react/recommended',
+		'plugin:jsx-a11y/recommended',
 	],
 	globals: {
 		wp: true,
@@ -19,6 +21,21 @@ module.exports = {
 		fetch: false,
 	},
 	parser: 'babel-eslint',
+	parserOptions: {
+		ecmaFeatures: {
+			jsx: true,
+			modules: true,
+		},
+		ecmaVersion: 2018,
+		sourceType: 'module',
+	},
+	plugins: [ 'react', 'jsx-a11y' ],
+	settings: {
+		react: {
+			pragma: 'wp',
+			version: 'detect',
+		},
+	},
 	rules: {
 		'array-bracket-spacing': [ 'error', 'always' ],
 		'arrow-parens': [ 'error', 'as-needed' ],
@@ -80,5 +97,21 @@ module.exports = {
 			},
 		],
 		'template-curly-spacing': [ 'error', 'always' ],
+		'react/display-name': 'off',
+		'react/jsx-curly-spacing': [
+			'error',
+			{
+				when: 'always',
+				children: true,
+			},
+		],
+		'react/jsx-equals-spacing': 'error',
+		'react/jsx-indent': [ 'error', 'tab' ],
+		'react/jsx-indent-props': [ 'error', 'tab' ],
+		'react/jsx-key': 'error',
+		'react/jsx-tag-spacing': 'error',
+		'react/no-children-prop': 'off',
+		'react/no-find-dom-node': 'warn',
+		'react/prop-types': 'off',
 	},
 }

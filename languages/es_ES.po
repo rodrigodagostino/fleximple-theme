@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fleximple Theme 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/fleximple-theme\n"
-"POT-Creation-Date: 2021-07-28T22:21:28+02:00\n"
-"PO-Revision-Date: 2021-07-28 18:03-0300\n"
+"POT-Creation-Date: 2021-08-04T04:51:16+02:00\n"
+"PO-Revision-Date: 2021-08-03 23:51-0300\n"
 "Last-Translator: Rodrigo D’Agostino <rodrigo.dagostino@gmail.com>\n"
 "Language-Team: \n"
 "Language: es\n"
@@ -401,12 +401,12 @@ msgstr ""
 "Parece que no hemos podido encontrar lo que estás buscando. Tal vez la "
 "búsqueda pueda ayudar."
 
-#: template-parts/content-page.php:36 template-parts/content.php:56
+#: template-parts/content-page.php:36 template-parts/content.php:64
 msgid "Pages:"
 msgstr "Páginas:"
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:45
+#: template-parts/content.php:53
 msgid "Continue reading<span class=\"sr-only\"> \"%s\"</span>"
 msgstr "Sigue leyendo<span class=\"sr-only\"> \"%s\"</span>"
 
@@ -423,6 +423,14 @@ msgstr "Mostrar menú"
 msgctxt "toggle button"
 msgid "Display search bar"
 msgstr "Mostrar barra de búsqueda"
+
+#: dist/editor-script.js:1 src/js/editor/post-kicker-meta-box.js:35
+msgid "Kicker"
+msgstr "Volanta"
+
+#: dist/editor-script.js:1 src/js/editor/post-kicker-meta-box.js:38
+msgid "Write a kicker"
+msgstr "Escribe una volanta"
 
 #~ msgid "Leave a Comment<span class=\"sr-only\"> on %s</span>"
 #~ msgstr "Deja un comentario<span class=\"sr-only\"> en %s</span>"

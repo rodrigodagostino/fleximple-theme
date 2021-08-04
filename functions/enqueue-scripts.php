@@ -129,7 +129,7 @@ function fleximpletheme_enqueue_editor_assets() {
 	if ( function_exists( 'wp_set_script_translations' ) ) {
 		wp_set_script_translations(
 			'theme-editor-scripts',
-			'cimientos',
+			'fleximpletheme',
 			get_template_directory() . '/languages'
 		);
 	}

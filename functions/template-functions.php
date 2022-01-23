@@ -53,4 +53,4 @@ add_filter( 'login_headerurl', 'fleximpletheme_login_logo_url' );
 function fleximpletheme_login_logo_url_title() {
     return get_bloginfo( 'name' );
 }
-add_filter( 'login_headertitle', 'fleximpletheme_login_logo_url_title' );
+add_filter( 'login_headertext', 'fleximpletheme_login_logo_url_title' );

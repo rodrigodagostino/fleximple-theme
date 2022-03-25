@@ -21,12 +21,11 @@
 		"ie >= 11"
 	],
 	"devDependencies": {
-		"@babel/core": "^7.14.8",
+		"@babel/eslint-parser": "^7.17.0",
+		"@babel/runtime": "^7.17.8",
 		"@wordpress/babel-preset-default": "^6.3.1",
 		"@wordpress/dependency-extraction-webpack-plugin": "^3.2.1",
 		"animate.css": "^4.1.1",
-		"babel-eslint": "^10.1.0",
-		"babel-loader": "^8.2.2",
 		"clean-webpack-plugin": "^4.0.0-alpha.0",
 		"css-loader": "^6.2.0",
 		"eslint": "^8.7.0",

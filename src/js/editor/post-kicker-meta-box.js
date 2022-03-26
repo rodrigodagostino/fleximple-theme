@@ -9,43 +9,43 @@ import { useEffect, useState } from '@wordpress/element'
 import { registerPlugin } from '@wordpress/plugins'
 
 const PostKickerMetaBox = () => {
-	const {
-		meta,
-		meta: { kicker },
-	} = useSelect( select => ( {
-		meta: select( 'core/editor' ).getEditedPostAttribute( 'meta' ) || {},
-	} ) )
+  const {
+    meta,
+    meta: { kicker },
+  } = useSelect( ( select ) => ({
+    meta: select( 'core/editor' ).getEditedPostAttribute( 'meta' ) || {},
+  }) )
 
-	const { editPost } = useDispatch( 'core/editor' )
+  const { editPost } = useDispatch( 'core/editor' )
 
-	const [ kickerValue, setKickerValue ] = useState( kicker )
+  const [ kickerValue, setKickerValue ] = useState( kicker )
 
-	useEffect( () => {
-		editPost( {
-			meta: {
-				...meta,
-				kicker: kickerValue,
-			},
-		} )
-	}, [ kickerValue ] )
+  useEffect( () => {
+    editPost({
+      meta: {
+        ...meta,
+        kicker: kickerValue,
+      },
+    })
+  }, [ kickerValue ] )
 
-	return (
-		<PluginDocumentSettingPanel
-			name='post-kicker-meta-box'
-			title={ __( 'Kicker', 'fleximpletheme' ) }
-		>
-			<TextControl
-				label={ __( 'Write a kicker', 'fleximpletheme' ) }
-				value={ kickerValue }
-				onChange={ setKickerValue }
-			/>
-		</PluginDocumentSettingPanel>
-	)
+  return (
+    <PluginDocumentSettingPanel
+      name="post-kicker-meta-box"
+      title={ __( 'Kicker', 'fleximpletheme' ) }
+    >
+      <TextControl
+        label={ __( 'Write a kicker', 'fleximpletheme' ) }
+        value={ kickerValue }
+        onChange={ setKickerValue }
+      />
+    </PluginDocumentSettingPanel>
+  )
 }
 
 if ( window.pagenow === 'post' ) {
-	registerPlugin( 'kicker', {
-		render: PostKickerMetaBox,
-		icon: null,
-	} )
+  registerPlugin( 'kicker', {
+    render: PostKickerMetaBox,
+    icon: null,
+  })
 }

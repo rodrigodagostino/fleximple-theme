@@ -5,105 +5,105 @@
  ----------------------------------------------*/
 
 body.error404 {
-	.site-navigation {
-		a:focus {
-			outline: $error-404__site-nav__link__outline;
-		}
-	}
+  .site-navigation {
+    a:focus {
+      outline: $error-404__site-nav__link__outline;
+    }
+  }
 
-	.site-main {
-		.page-title {
-			font-size: $error-404__page-title__font-size;
-		}
+  .site-main {
+    .page-title {
+      font-size: $error-404__page-title__font-size;
+    }
 
-		.page-content {
-			padding: $error-404__page-content__padding;
-			margin: $error-404__page-content__margin;
+    .page-content {
+      padding: $error-404__page-content__padding;
+      margin: $error-404__page-content__margin;
 
-			.search-form {
-				margin: $error-404__search-form__margin;
-			}
-		}
-	}
+      .search-form {
+        margin: $error-404__search-form__margin;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: var(--bp-small)) {
-	body.error404 {
-		.site-main {
-			.page-title {
-				@if ($error-404__page-title__font-size--small != null) {
-					font-size: $error-404__page-title__font-size--small;
-				}
-			}
+  body.error404 {
+    .site-main {
+      .page-title {
+        @if ($error-404__page-title__font-size--small != null) {
+          font-size: $error-404__page-title__font-size--small;
+        }
+      }
 
-			.page-content {
-				@if ($error-404__page-content__padding--small != null) {
-					padding: $error-404__page-content__padding--small;
-				}
-				@if ($error-404__page-content__margin--small != null) {
-					margin: $error-404__page-content__margin--small;
-				}
+      .page-content {
+        @if ($error-404__page-content__padding--small != null) {
+          padding: $error-404__page-content__padding--small;
+        }
+        @if ($error-404__page-content__margin--small != null) {
+          margin: $error-404__page-content__margin--small;
+        }
 
-				.search-form {
-					@if ($error-404__search-form__margin--small != null) {
-						margin: $error-404__search-form__margin--small;
-					}
-				}
-			}
-		}
-	}
+        .search-form {
+          @if ($error-404__search-form__margin--small != null) {
+            margin: $error-404__search-form__margin--small;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: var(--bp-medium)) {
-	body.error404 {
-		.site-main {
-			.page-title {
-				@if ($error-404__page-title__font-size--medium != null) {
-					font-size: $error-404__page-title__font-size--medium;
-				}
-			}
+  body.error404 {
+    .site-main {
+      .page-title {
+        @if ($error-404__page-title__font-size--medium != null) {
+          font-size: $error-404__page-title__font-size--medium;
+        }
+      }
 
-			.page-content {
-				@if ($error-404__page-content__padding--medium != null) {
-					padding: $error-404__page-content__padding--medium;
-				}
-				@if ($error-404__page-content__margin--medium != null) {
-					margin: $error-404__page-content__margin--medium;
-				}
+      .page-content {
+        @if ($error-404__page-content__padding--medium != null) {
+          padding: $error-404__page-content__padding--medium;
+        }
+        @if ($error-404__page-content__margin--medium != null) {
+          margin: $error-404__page-content__margin--medium;
+        }
 
-				.search-form {
-					@if ($error-404__search-form__margin--medium != null) {
-						margin: $error-404__search-form__margin--medium;
-					}
-				}
-			}
-		}
-	}
+        .search-form {
+          @if ($error-404__search-form__margin--medium != null) {
+            margin: $error-404__search-form__margin--medium;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: var(--bp-large)) {
-	body.error404 {
-		.site-main {
-			.page-title {
-				@if ($error-404__page-title__font-size--large != null) {
-					font-size: $error-404__page-title__font-size--large;
-				}
-			}
+  body.error404 {
+    .site-main {
+      .page-title {
+        @if ($error-404__page-title__font-size--large != null) {
+          font-size: $error-404__page-title__font-size--large;
+        }
+      }
 
-			.page-content {
-				@if ($error-404__page-content__padding--large != null) {
-					padding: $error-404__page-content__padding--large;
-				}
-				@if ($error-404__page-content__margin--large != null) {
-					margin: $error-404__page-content__margin--large;
-				}
+      .page-content {
+        @if ($error-404__page-content__padding--large != null) {
+          padding: $error-404__page-content__padding--large;
+        }
+        @if ($error-404__page-content__margin--large != null) {
+          margin: $error-404__page-content__margin--large;
+        }
 
-				.search-form {
-					@if ($error-404__search-form__margin--large != null) {
-						margin: $error-404__search-form__margin--large;
-					}
-				}
-			}
-		}
-	}
+        .search-form {
+          @if ($error-404__search-form__margin--large != null) {
+            margin: $error-404__search-form__margin--large;
+          }
+        }
+      }
+    }
+  }
 }

@@ -5,38 +5,38 @@
  ----------------------------------------------*/
 
 .is-hidden {
-	display: none;
+  display: none;
 }
 
 .is-scroll-locked {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .animate-fade-in {
-	visibility: hidden;
-	opacity: 0;
-	transition: visibility 0s linear 0.24s, opacity 0.24s ease;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.24s, opacity 0.24s ease;
 }
 
 .animate-fade-in-up {
-	visibility: hidden;
-	opacity: 0;
-	transform: translate3d(0, 40%, 0);
-	transition: visibility 0s ease 0.24s, opacity 0.24s ease, transform 0.24s ease;
-	will-change: transform;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(0, 40%, 0);
+  transition: visibility 0s ease 0.24s, opacity 0.24s ease, transform 0.24s ease;
+  will-change: transform;
 }
 
 .animate-fade-in-down {
-	visibility: hidden;
-	opacity: 0;
-	transform: translate3d(0, -40%, 0);
-	transition: visibility 0s ease 0.24s, opacity 0.24s ease, transform 0.24s ease;
-	will-change: transform;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(0, -40%, 0);
+  transition: visibility 0s ease 0.24s, opacity 0.24s ease, transform 0.24s ease;
+  will-change: transform;
 }
 
 .is-faded-in {
-	visibility: visible;
-	opacity: 1;
-	transform: translate3d(0, 0, 0);
-	transition: visibility 0s linear, opacity 0.24s ease, transform 0.24s ease;
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: visibility 0s linear, opacity 0.24s ease, transform 0.24s ease;
 }

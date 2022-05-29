@@ -5,172 +5,173 @@
  ----------------------------------------------*/
 
 .menu-toggle {
-	background-color: $menu-toggle__background-color;
-	width: $menu-toggle__width;
-	height: $menu-toggle__height;
-	padding: 0;
-	border: none;
-	border-radius: $menu-toggle__border-radius;
-	box-shadow: $menu-toggle__box-shadow;
-	outline: none;
-	position: relative;
-	transition: background-color 0.2s ease;
-	cursor: pointer;
-	z-index: 10;
+  background-color: $menu-toggle__background-color;
+  width: $menu-toggle__width;
+  height: $menu-toggle__height;
+  padding: 0;
+  border: none;
+  border-radius: $menu-toggle__border-radius;
+  box-shadow: $menu-toggle__box-shadow;
+  outline: none;
+  position: relative;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  z-index: 10;
 
-	.menu-toggle__line {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: $menu-toggle__line__width;
-		height: $menu-toggle__line__height;
-		background-color: $menu-toggle__line__background-color;
-		transition: background-color 0.2s ease;
+  .menu-toggle__line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $menu-toggle__line__width;
+    height: $menu-toggle__line__height;
+    background-color: $menu-toggle__line__background-color;
+    transition: background-color 0.2s ease;
 
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			left: 0;
-			width: 100%;
-			height: rem(3px);
-			background-color: $menu-toggle__line__background-color;
-			transition: top 150ms ease 0.2s, bottom 150ms ease 0.2s, transform 150ms ease;
-		}
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: rem(3px);
+      background-color: $menu-toggle__line__background-color;
+      transition: top 150ms ease 0.2s, bottom 150ms ease 0.2s,
+        transform 150ms ease;
+    }
 
-		&::before {
-			top: $menu-toggle__line__gap;
-		}
+    &::before {
+      top: $menu-toggle__line__gap;
+    }
 
-		&::after {
-			bottom: $menu-toggle__line__gap;
-		}
-	}
+    &::after {
+      bottom: $menu-toggle__line__gap;
+    }
+  }
 
-	&:hover {
-		background-color: $menu-toggle__background-color--hover;
-		
-		.menu-toggle__line {
-			&::before,
-			&::after {
-				background-color: $menu-toggle__line__background-color--hover;
-			}
-		}
-	}
-	
-	&:focus {
-		background-color: $menu-toggle__background-color--focus;
-		box-shadow: $menu-toggle__box-shadow--focus;
-		outline: none;
+  &:hover {
+    background-color: $menu-toggle__background-color--hover;
 
-		.menu-toggle__line {
-			&::before,
-			&::after {
-				background-color: $menu-toggle__line__background-color--focus;
-			}
-		}
-	}
+    .menu-toggle__line {
+      &::before,
+      &::after {
+        background-color: $menu-toggle__line__background-color--hover;
+      }
+    }
+  }
 
-	&:active,
-	&.is-active {
-		background-color: $menu-toggle__background-color--active;
-		z-index: 120;
-		
-		&:focus {
-			box-shadow: $menu-toggle__box-shadow--active;
-		}
+  &:focus {
+    background-color: $menu-toggle__background-color--focus;
+    box-shadow: $menu-toggle__box-shadow--focus;
+    outline: none;
 
-		.menu-toggle__line {
-			background-color: transparent;
-			
-			&::before,
-			&::after {
-				background-color: $menu-toggle__line__background-color--active;
-				transition: top 150ms ease, bottom 150ms ease, transform 150ms ease 0.2s;
-			}
+    .menu-toggle__line {
+      &::before,
+      &::after {
+        background-color: $menu-toggle__line__background-color--focus;
+      }
+    }
+  }
 
-			&::before {
-				top: 0;
-				transform: rotate(45deg);
-			}
+  &:active,
+  &.is-active {
+    background-color: $menu-toggle__background-color--active;
+    z-index: 120;
 
-			&::after {
-				bottom: 0;
-				transform: rotate(-45deg);
-			}
-		}
-	}
+    &:focus {
+      box-shadow: $menu-toggle__box-shadow--active;
+    }
+
+    .menu-toggle__line {
+      background-color: transparent;
+
+      &::before,
+      &::after {
+        background-color: $menu-toggle__line__background-color--active;
+        transition: top 150ms ease, bottom 150ms ease, transform 150ms ease 0.2s;
+      }
+
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
 }
 
 .submenu-toggle {
-	position: absolute;
-	right: 0;
-	border: none !important;
-	outline: none;
+  position: absolute;
+  right: 0;
+  border: none !important;
+  outline: none;
 
-	svg {
-		fill: $submenu-toggle__color;
-		display: flex;
-	}
+  svg {
+    fill: $submenu-toggle__color;
+    display: flex;
+  }
 
-	&:focus,
-	&:hover {
-		svg {
-			fill: $submenu-toggle__color--hover;
-		}
-	}
+  &:focus,
+  &:hover {
+    svg {
+      fill: $submenu-toggle__color--hover;
+    }
+  }
 
-	&:focus {
-		outline: none;
-		box-shadow: 0 0 0 0.25rem color-mod(var(--color-primary) a(25%));
-	}
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem color-mod(var(--color-primary) a(25%));
+  }
 }
 
 .menu-item--highlighted {
-	& > .submenu-toggle {
-		svg {
-			fill: $submenu-toggle--highlighted__color;
-		}
+  & > .submenu-toggle {
+    svg {
+      fill: $submenu-toggle--highlighted__color;
+    }
 
-		&:focus svg,
-		&:hover svg {
-			fill: $submenu-toggle--highlighted__color--hover;
-		}
-	}
+    &:focus svg,
+    &:hover svg {
+      fill: $submenu-toggle--highlighted__color--hover;
+    }
+  }
 }
 
 @media only screen and (max-width: calc(var(--bp-large) - 1px)) {
-	.submenu-toggle {
-		top: 0;
-		line-height: 1;
-		padding: var(--space-100);
+  .submenu-toggle {
+    top: 0;
+    line-height: 1;
+    padding: var(--space-100);
 
-		svg {
-			height: var(--space-125);
-			width: var(--space-125);
-		}
-	}
+    svg {
+      height: var(--space-125);
+      width: var(--space-125);
+    }
+  }
 }
 
 @media only screen and (min-width: $menu-toggle__is-hidden) {
-	.menu-toggle {
-		display: none;
-	}
+  .menu-toggle {
+    display: none;
+  }
 
-	.submenu-toggle {
-		top: 50%;
-		transform: translateY(-50%);
-		line-height: 1;
-		padding: var(--space-050);
+  .submenu-toggle {
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+    padding: var(--space-050);
 
-		svg {
-			width: rem(16px);
-			height: rem(16px);
-		}
-	}
+    svg {
+      width: rem(16px);
+      height: rem(16px);
+    }
+  }
 
-	.submenu .submenu-toggle svg {
-		transform: rotate(-90deg);
-	}
+  .submenu .submenu-toggle svg {
+    transform: rotate(-90deg);
+  }
 }

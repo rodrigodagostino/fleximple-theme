@@ -8,18 +8,18 @@ body.search {
 }
 
 body.search-results {
-	.site-main {
-		.search-results-count {
-			font-size: $search-results__count__font-size;
-			margin: $search-results__count__margin;
-		}
+  .site-main {
+    .search-results-count {
+      font-size: $search-results__count__font-size;
+      margin: $search-results__count__margin;
+    }
 
-		.search-form + .hentry {
-			margin-top: var(--space-200);
-		}
+    .search-form + .hentry {
+      margin-top: var(--space-200);
+    }
 
-		.hentry {
-			flex-direction: row-reverse;
-		}
-	}
+    .hentry {
+      flex-direction: row-reverse;
+    }
+  }
 }

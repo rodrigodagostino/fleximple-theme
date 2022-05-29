@@ -5,83 +5,83 @@
  ----------------------------------------------*/
 
 .branding {
-	text-align: left;
+  text-align: left;
 }
 
 .site-logo {
-	padding: $logo__padding;
-	display: block;
+  padding: $logo__padding;
+  display: block;
 
-	img,
-	svg {
-		width: $logo__width;
-		height: $logo__height;
-		vertical-align: top; // Removes blank space below.
+  img,
+  svg {
+    width: $logo__width;
+    height: $logo__height;
+    vertical-align: top; // Removes blank space below.
 
-		path {
-			fill: $logo__fill;
-			transition: fill 0.3s ease;
-		}
-	}
+    path {
+      fill: $logo__fill;
+      transition: fill 0.3s ease;
+    }
+  }
 
-	&:focus,
-	&:hover {
-		svg path {
-			fill: $logo__fill--hover;
-		}
-	}
+  &:focus,
+  &:hover {
+    svg path {
+      fill: $logo__fill--hover;
+    }
+  }
 }
 
 @media only screen and (min-width: var(--bp-small)) {
-	.site-logo {
-		@if ($logo__padding--small != null) {
-			padding: $logo__padding--small;
-		}
+  .site-logo {
+    @if ($logo__padding--small != null) {
+      padding: $logo__padding--small;
+    }
 
-		img,
-		svg {
-			@if ($logo__width--small != null) {
-				width: $logo__width--small;
-			}
-			@if ($logo__height--small != null) {
-				height: $logo__height--small;
-			}
-		}
-	}
+    img,
+    svg {
+      @if ($logo__width--small != null) {
+        width: $logo__width--small;
+      }
+      @if ($logo__height--small != null) {
+        height: $logo__height--small;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: var(--bp-medium)) {
-	.site-logo {
-		@if ($logo__padding--medium != null) {
-			padding: $logo__padding--medium;
-		}
+  .site-logo {
+    @if ($logo__padding--medium != null) {
+      padding: $logo__padding--medium;
+    }
 
-		img,
-		svg {
-			@if ($logo__width--medium != null) {
-				width: $logo__width--medium;
-			}
-			@if ($logo__height--medium != null) {
-				height: $logo__height--medium;
-			}
-		}
-	}
+    img,
+    svg {
+      @if ($logo__width--medium != null) {
+        width: $logo__width--medium;
+      }
+      @if ($logo__height--medium != null) {
+        height: $logo__height--medium;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: var(--bp-large)) {
-	.site-logo {
-		@if ($logo__padding--large != null) {
-			padding: $logo__padding--large;
-		}
+  .site-logo {
+    @if ($logo__padding--large != null) {
+      padding: $logo__padding--large;
+    }
 
-		img,
-		svg {
-			@if ($logo__width--large != null) {
-				width: $logo__width--large;
-			}
-			@if ($logo__height--large != null) {
-				height: $logo__height--large;
-			}
-		}
-	}
+    img,
+    svg {
+      @if ($logo__width--large != null) {
+        width: $logo__width--large;
+      }
+      @if ($logo__height--large != null) {
+        height: $logo__height--large;
+      }
+    }
+  }
 }

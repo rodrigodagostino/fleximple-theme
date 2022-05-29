@@ -6,7 +6,7 @@
 
 .front-page-content > [class*="-block-"],
 .entry-content > [class*="-block-"] {
-	margin-bottom: var(--space-150);
+  margin-bottom: var(--space-150);
 }
 
 /*----------------------
@@ -15,34 +15,34 @@
 // https://www.billerickson.net/wordpress-color-palette-button-styling-gutenberg/
 // See editor-color-palette in functions.php
 $colors: (
-	"primary-lighter": #4da6ff,
-	"primary-light": #2693ff,
-	"primary": #0080ff,
-	"primary-dark": #006dd9,
-	"primary-darker": #005ab3,
-	"accent-lighter": #ff694d,
-	"accent-light": #ff4826,
-	"accent": #ff2800,
-	"accent-dark": #d92200,
-	"accent-darker": #b31c00,
-	"gray-lighter": #e1e1e6,
-	"gray-light": #a4a6b5,
-	"gray": #686a84,
-	"gray-dark": #494a5c,
-	"gray-darker": #2a2a35,
-	"white": #f3f3f5,
-	"black": #15151a,
+  "primary-lighter": #4da6ff,
+  "primary-light": #2693ff,
+  "primary": #0080ff,
+  "primary-dark": #006dd9,
+  "primary-darker": #005ab3,
+  "accent-lighter": #ff694d,
+  "accent-light": #ff4826,
+  "accent": #ff2800,
+  "accent-dark": #d92200,
+  "accent-darker": #b31c00,
+  "gray-lighter": #e1e1e6,
+  "gray-light": #a4a6b5,
+  "gray": #686a84,
+  "gray-dark": #494a5c,
+  "gray-darker": #2a2a35,
+  "white": #f3f3f5,
+  "black": #15151a,
 );
 
 @each $name, $color in $colors {
-	.has-#{$name}-color {
-		color: $color;
-	}
+  .has-#{$name}-color {
+    color: $color;
+  }
 
-	.has-#{$name}-background-color {
-		background-color: $color;
-		border-color: $color;
-	}
+  .has-#{$name}-background-color {
+    background-color: $color;
+    border-color: $color;
+  }
 }
 
 /*----------------------
@@ -50,322 +50,320 @@ $colors: (
  ---------------------*/
 // Button Block
 .wp-block-button {
-	.wp-block-button__link {
-		font-family: var(--font-primary);
-		line-height: 1;
-		text-decoration: none;
-		border-width: 1px;
-		border-style: solid;
-		border-radius: var(--space-025);
-		padding: var(--space-100) var(--space-125);
-		transition: background-color 0.2s ease, color 0.2s ease,
-			border-color 0.2s ease, border-radius 0.2s ease,
-			box-shadow 0.2s ease;
-		-webkit-appearance: none;
-		cursor: pointer;
+  .wp-block-button__link {
+    font-family: var(--font-primary);
+    line-height: 1;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: var(--space-025);
+    padding: var(--space-100) var(--space-125);
+    transition: background-color 0.2s ease, color 0.2s ease,
+      border-color 0.2s ease, border-radius 0.2s ease, box-shadow 0.2s ease;
+    -webkit-appearance: none;
+    cursor: pointer;
 
-		&:active,
-		&:focus {
-			@include box-shadow(2, inset);
-			outline: none;
-		}
+    &:active,
+    &:focus {
+      @include box-shadow(2, inset);
+      outline: none;
+    }
 
-		&:not(.has-text-color) {
-			color: var(--white-rich);
+    &:not(.has-text-color) {
+      color: var(--white-rich);
 
-			&:hover {
-				color: var(--white-rich);
-			}
+      &:hover {
+        color: var(--white-rich);
+      }
 
-			&:active,
-			&:focus {
-				color: var(--white-rich);
-			}
-		}
+      &:active,
+      &:focus {
+        color: var(--white-rich);
+      }
+    }
 
-		&:not(.has-background) {
-			background-color: var(--gray-800);
-			border-color: var(--gray-800);
+    &:not(.has-background) {
+      background-color: var(--gray-800);
+      border-color: var(--gray-800);
 
-			&:hover {
-				background-color: var(--color-primary);
-				border-color: var(--color-primary);
-			}
+      &:hover {
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
+      }
 
-			&:active,
-			&:focus {
-				background-color: var(--color-primary--dark);
-				border-color: var(--color-primary--dark);
-			}
-		}
+      &:active,
+      &:focus {
+        background-color: var(--color-primary--dark);
+        border-color: var(--color-primary--dark);
+      }
+    }
 
-		@each $name, $color in $colors {
-			&.has-#{$name}-color:hover {
-				color: $color !important;
-			}
+    @each $name, $color in $colors {
+      &.has-#{$name}-color:hover {
+        color: $color !important;
+      }
 
-			&.has-#{$name}-color:active,
-			&.has-#{$name}-color:focus {
-				color: $color !important;
-			}
+      &.has-#{$name}-color:active,
+      &.has-#{$name}-color:focus {
+        color: $color !important;
+      }
 
-			&.has-#{$name}-background-color {
-				background-color: $color !important;
-				border-color: $color !important;
+      &.has-#{$name}-background-color {
+        background-color: $color !important;
+        border-color: $color !important;
 
-				&:hover {
-					background-color: shade($color, 15%) !important;
-					border-color: shade($color, 15%);
-				}
+        &:hover {
+          background-color: shade($color, 15%) !important;
+          border-color: shade($color, 15%);
+        }
 
-				&:active,
-				&:focus {
-					background-color: shade($color, 20%) !important;
-					border-color: shade($color, 20%);
-				}
-			}
-		}
-	}
+        &:active,
+        &:focus {
+          background-color: shade($color, 20%) !important;
+          border-color: shade($color, 20%);
+        }
+      }
+    }
+  }
 
-	&.is-style-outline {
-		.wp-block-button__link {
-			&:active,
-			&:focus {
-				@include box-shadow(2, inset);
-			}
+  &.is-style-outline {
+    .wp-block-button__link {
+      &:active,
+      &:focus {
+        @include box-shadow(2, inset);
+      }
 
-			&:not(.has-text-color) {
-				color: var(--gray-800);
+      &:not(.has-text-color) {
+        color: var(--gray-800);
 
-				&:hover {
-					color: var(--white-rich);
-				}
+        &:hover {
+          color: var(--white-rich);
+        }
 
-				&:active,
-				&:focus {
-					color: var(--white-rich);
-				}
-			}
+        &:active,
+        &:focus {
+          color: var(--white-rich);
+        }
+      }
 
-			&:not(.has-background) {
-				background-color: transparent;
-				border-color: var(--gray-800);
+      &:not(.has-background) {
+        background-color: transparent;
+        border-color: var(--gray-800);
 
-				&:hover {
-					background-color: var(--gray-800);
-					border-color: var(--gray-800);
-				}
+        &:hover {
+          background-color: var(--gray-800);
+          border-color: var(--gray-800);
+        }
 
-				&:active,
-				&:focus {
-					background-color: var(--gray-900);
-					border-color: var(--gray-900);
-				}
-			}
+        &:active,
+        &:focus {
+          background-color: var(--gray-900);
+          border-color: var(--gray-900);
+        }
+      }
 
-			@each $name, $color in $colors {
-				&.has-#{$name}-color:hover {
-					color: dynamic-text-color($color) !important;
-				}
+      @each $name, $color in $colors {
+        &.has-#{$name}-color:hover {
+          color: dynamic-text-color($color) !important;
+        }
 
-				&.has-#{$name}-color:active,
-				&.has-#{$name}-color:focus {
-					color: dynamic-text-color($color) !important;
-				}
+        &.has-#{$name}-color:active,
+        &.has-#{$name}-color:focus {
+          color: dynamic-text-color($color) !important;
+        }
 
-				&.has-#{$name}-background-color:hover {
-					background-color: $color !important;
-					border-color: $color;
-				}
+        &.has-#{$name}-background-color:hover {
+          background-color: $color !important;
+          border-color: $color;
+        }
 
-				&.has-#{$name}-background-color:active,
-				&.has-#{$name}-background-color:focus {
-					background-color: shade($color, 10%) !important;
-					border-color: shade($color, 10%);
-				}
-			}
-		}
-	}
+        &.has-#{$name}-background-color:active,
+        &.has-#{$name}-background-color:focus {
+          background-color: shade($color, 10%) !important;
+          border-color: shade($color, 10%);
+        }
+      }
+    }
+  }
 
-	&.is-style-squared {
-		.wp-block-button__link {
-			border-radius: 0;
-		}
-	}
+  &.is-style-squared {
+    .wp-block-button__link {
+      border-radius: 0;
+    }
+  }
 }
 
 /* Code Block */
 .wp-block-code {
-	max-width: 100%;
-	white-space: pre-wrap;
+  max-width: 100%;
+  white-space: pre-wrap;
 
-	code {
-		max-width: 100%;
-	}
+  code {
+    max-width: 100%;
+  }
 }
 
 /* Columns Block */
 .wp-block-columns {
-	flex-wrap: wrap !important;
-	justify-content: space-between;
+  flex-wrap: wrap !important;
+  justify-content: space-between;
 
-	.editor-block-list__layout {
-		flex-wrap: wrap !important;
-		justify-content: space-between;
+  .editor-block-list__layout {
+    flex-wrap: wrap !important;
+    justify-content: space-between;
 
-		.editor-block-list__block {
-			flex-basis: 100%;
-			padding: 0 !important;
-			margin-left: 0 !important;
-			margin-right: 0 !important;
-		}
+    .editor-block-list__block {
+      flex-basis: 100%;
+      padding: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
 
-		.editor-block-list__block-edit {
-			margin-left: 0 !important;
-			margin-right: 0 !important;
-		}
-	}
+    .editor-block-list__block-edit {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
 
-	.wp-block-column {
-		flex-basis: 100%;
-		padding: 0 !important;
-		margin-left: 0 !important;
-		margin-right: 0 !important;
-		margin-bottom: var(--space-150);
-	}
+  .wp-block-column {
+    flex-basis: 100%;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: var(--space-150);
+  }
 
-	@media only screen and (min-width: var(--bp-medium)) {
-		.editor-block-list__layout {
-			.editor-block-list__block {
-				flex-basis: 48%;
-			}
-		}
+  @media only screen and (min-width: var(--bp-medium)) {
+    .editor-block-list__layout {
+      .editor-block-list__block {
+        flex-basis: 48%;
+      }
+    }
 
-		.wp-block-column {
-			flex-basis: 48%;
-		}
-	}
+    .wp-block-column {
+      flex-basis: 48%;
+    }
+  }
 
-	@media only screen and (min-width: var(--bp-large)) {
-		&.has-3-columns,
-		&.has-6-columns {
-			.editor-block-list__layout {
-				.editor-block-list__block {
-					flex-basis: 32%;
-				}
-			}
+  @media only screen and (min-width: var(--bp-large)) {
+    &.has-3-columns,
+    &.has-6-columns {
+      .editor-block-list__layout {
+        .editor-block-list__block {
+          flex-basis: 32%;
+        }
+      }
 
-			.wp-block-column {
-				flex-basis: 32%;
-			}
-		}
-	}
+      .wp-block-column {
+        flex-basis: 32%;
+      }
+    }
+  }
 }
 
 /* Cover Block */
 .wp-block-cover,
 .wp-block-cover-image {
-	width: auto;
+  width: auto;
 
-	.wp-block-cover-text {
-		margin: var(--space-100) 0;
-	}
+  .wp-block-cover-text {
+    margin: var(--space-100) 0;
+  }
 }
 
 /* Embed Block */
 .wp-block-embed {
-	.wp-block-embed__wrapper {
-		text-align: center;
-	}
+  .wp-block-embed__wrapper {
+    text-align: center;
+  }
 
-	&.type-video {
-		& > .wp-block-embed__wrapper {
-			position: relative;
-			width: 100%;
-			height: 0;
-			padding-top: 56.25%;
+  &.type-video {
+    & > .wp-block-embed__wrapper {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 56.25%;
 
-			& > iframe {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				bottom: 0;
-				right: 0;
-			}
-		}
-	}
+      & > iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
 }
 
 /* File Block */
 .wp-block-file {
-	.wp-block-file__button {
-		color: var(--white-rich);
-		background-color: var(--gray-800);
-		border-color: var(--gray-800);
-		border-width: 1px;
-		border-style: solid;
-		border-radius: var(--space-025);
-		padding: rem(8px 16px 10px);
-		transition: background-color 0.2s ease, color 0.2s ease,
-			border-color 0.2s ease, border-radius 0.2s ease,
-			box-shadow 0.2s ease;
-		-webkit-appearance: none;
-		white-space: nowrap;
+  .wp-block-file__button {
+    color: var(--white-rich);
+    background-color: var(--gray-800);
+    border-color: var(--gray-800);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: var(--space-025);
+    padding: rem(8px 16px 10px);
+    transition: background-color 0.2s ease, color 0.2s ease,
+      border-color 0.2s ease, border-radius 0.2s ease, box-shadow 0.2s ease;
+    -webkit-appearance: none;
+    white-space: nowrap;
 
-		&:hover {
-			color: var(--white-rich);
-			background-color: var(--color-primary);
-			border-color: var(--color-primary);
-		}
+    &:hover {
+      color: var(--white-rich);
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
 
-		&:active,
-		&:focus {
-			color: var(--white-rich);
-			background-color: var(--color-primary--dark);
-			border-color: var(--color-primary--dark);
-			@include box-shadow(2, inset, isImportant);
-		}
-	}
+    &:active,
+    &:focus {
+      color: var(--white-rich);
+      background-color: var(--color-primary--dark);
+      border-color: var(--color-primary--dark);
+      @include box-shadow(2, inset, isImportant);
+    }
+  }
 }
 
 /* Gallery Block */
 .wp-block-gallery {
-	padding-left: 0;
+  padding-left: 0;
 
-	.blocks-gallery-image figure,
-	.blocks-gallery-item figure {
-		align-items: center !important;
-		justify-content: center !important;
-		margin-bottom: 0;
+  .blocks-gallery-image figure,
+  .blocks-gallery-item figure {
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 0;
 
-		img {
-			max-height: rem(150px);
-		}
-	}
+    img {
+      max-height: rem(150px);
+    }
+  }
 
-	&:not(.components-placeholder) {
-		margin: var(--space-150) auto;
-	}
+  &:not(.components-placeholder) {
+    margin: var(--space-150) auto;
+  }
 }
 
 /* Image Block */
 .wp-block-image {
-	max-width: none;
+  max-width: none;
 
-	img {
-		display: block;
-	}
+  img {
+    display: block;
+  }
 
-	&.alignleft,
-	&.alignright {
-		width: 100%;
-	}
+  &.alignleft,
+  &.alignright {
+    width: 100%;
+  }
 
-	&.alignfull img {
-		width: 100vw;
-	}
+  &.alignfull img {
+    width: 100vw;
+  }
 }
 
 /* Latest Posts Block */
@@ -373,83 +371,83 @@ ul.wp-block-latest-posts.alignwide,
 ul.wp-block-latest-posts.alignfull,
 ul.wp-block-latest-posts.is-grid.alignwide,
 ul.wp-block-latest-posts.is-grid.alignwide {
-	padding: 0 var(--space-050);
+  padding: 0 var(--space-050);
 }
 
 /* Table Block */
 .wp-block-table {
-	overflow-x: auto;
+  overflow-x: auto;
 
-	table {
-		border-collapse: collapse;
-		width: 100%;
-	}
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
 
-	td,
-	th {
-		padding: var(--space-025);
-	}
+  td,
+  th {
+    padding: var(--space-025);
+  }
 
-	th {
-		font-weight: 700;
-	}
+  th {
+    font-weight: 700;
+  }
 
-	&.is-style-stripes {
-		tr:nth-child(odd) {
-			background-color: var(--gray-050);
-		}
-	}
+  &.is-style-stripes {
+    tr:nth-child(odd) {
+      background-color: var(--gray-050);
+    }
+  }
 }
 
 /* Quote Block */
 .wp-block-quote {
-	&.is-large {
-		margin: 0 auto var(--space-100);
-	}
+  &.is-large {
+    margin: 0 auto var(--space-100);
+  }
 
-	&:not(.is-large):not(.is-style-large) {
-		border-left: $single__entry-quote__border-left;
-		padding: $single__entry-quote__padding;
-		margin: $single__entry-quote__margin;
-	}
+  &:not(.is-large):not(.is-style-large) {
+    border-left: $single__entry-quote__border-left;
+    padding: $single__entry-quote__padding;
+    margin: $single__entry-quote__margin;
+  }
 }
 
 /* Pullquote Block */
 .wp-block-pullquote > p:first-child {
-	margin-top: 0;
+  margin-top: 0;
 }
 
 /* Separator Block */
 .wp-block-separator {
-	margin: calc(var(--space-150) * 2) auto;
-	padding: 0;
+  margin: calc(var(--space-150) * 2) auto;
+  padding: 0;
 
-	&:not(.is-style-dots) {
-		border-bottom: 2px solid var(--gray-200);
-	}
+  &:not(.is-style-dots) {
+    border-bottom: 2px solid var(--gray-200);
+  }
 
-	&.is-style-dots:before {
-		font-size: var(--text-150);
-		color: var(--text__color--subtle);
-		letter-spacing: var(--space-100);
-		padding-left: var(--space-100);
-	}
+  &.is-style-dots:before {
+    font-size: var(--text-150);
+    color: var(--text__color--subtle);
+    letter-spacing: var(--space-100);
+    padding-left: var(--space-100);
+  }
 }
 
 /* Remove duplicate rule-line when a separator
  * is followed by an H1, or H2 */
 .wp-block[data-type="core/separator"]
-	+ .wp-block[data-type="core/heading"]
-	h1:before,
+  + .wp-block[data-type="core/heading"]
+  h1:before,
 .wp-block[data-type="core/separator"]
-	+ .wp-block[data-type="core/heading"]
-	h2:before {
-	display: none;
+  + .wp-block[data-type="core/heading"]
+  h2:before {
+  display: none;
 }
 
 /* Video Block */
 .wp-block-video video {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 /*----------------------
@@ -457,326 +455,326 @@ ul.wp-block-latest-posts.is-grid.alignwide {
  ---------------------*/
 /* Button Block */
 .fleximple-block-button {
-	&__link {
-		font-family: var(--font-primary);
+  &__link {
+    font-family: var(--font-primary);
 
-		svg {
-			fill: var(--gray-600);
-		}
-	}
+    svg {
+      fill: var(--gray-600);
+    }
+  }
 
-	&.is-style-default,
-	&.is-style-squared {
-		.fleximple-block-button-extended__link {
-			border-radius: var(--space-025);
-			padding: var(--space-100) var(--space-125);
+  &.is-style-default,
+  &.is-style-squared {
+    .fleximple-block-button-extended__link {
+      border-radius: var(--space-025);
+      padding: var(--space-100) var(--space-125);
 
-			&:not(.has-text-color) {
-				color: var(--white-rich);
+      &:not(.has-text-color) {
+        color: var(--white-rich);
 
-				svg {
-					fill: var(--white-rich);
-				}
+        svg {
+          fill: var(--white-rich);
+        }
 
-				&:hover {
-					color: var(--white-rich);
+        &:hover {
+          color: var(--white-rich);
 
-					svg {
-						fill: var(--white-rich);
-					}
-				}
+          svg {
+            fill: var(--white-rich);
+          }
+        }
 
-				&:active,
-				&:focus {
-					color: var(--white-rich);
+        &:active,
+        &:focus {
+          color: var(--white-rich);
 
-					svg {
-						fill: var(--white-rich);
-					}
-				}
-			}
+          svg {
+            fill: var(--white-rich);
+          }
+        }
+      }
 
-			&:not(.has-background) {
-				background-color: var(--gray-800);
-				border-color: var(--gray-800);
+      &:not(.has-background) {
+        background-color: var(--gray-800);
+        border-color: var(--gray-800);
 
-				&:hover {
-					background-color: var(--color-primary);
-					border-color: var(--color-primary);
-				}
+        &:hover {
+          background-color: var(--color-primary);
+          border-color: var(--color-primary);
+        }
 
-				&:active,
-				&:focus {
-					background-color: var(--color-primary--dark);
-					border-color: var(--color-primary--dark);
-				}
-			}
+        &:active,
+        &:focus {
+          background-color: var(--color-primary--dark);
+          border-color: var(--color-primary--dark);
+        }
+      }
 
-			@each $name, $color in $colors {
-				&.has-#{$name}-color {
-					// color: $color;
+      @each $name, $color in $colors {
+        &.has-#{$name}-color {
+          // color: $color;
 
-					svg {
-						fill: $color;
-					}
-				}
+          svg {
+            fill: $color;
+          }
+        }
 
-				&.has-#{$name}-color:hover {
-					color: $color;
+        &.has-#{$name}-color:hover {
+          color: $color;
 
-					svg {
-						fill: $color;
-					}
-				}
+          svg {
+            fill: $color;
+          }
+        }
 
-				&.has-#{$name}-color:active,
-				&.has-#{$name}-color:focus {
-					color: $color;
+        &.has-#{$name}-color:active,
+        &.has-#{$name}-color:focus {
+          color: $color;
 
-					svg {
-						fill: $color;
-					}
-				}
+          svg {
+            fill: $color;
+          }
+        }
 
-				&.has-#{$name}-background-color {
-					// background-color: $color;
-					// border-color: $color;
-				}
+        &.has-#{$name}-background-color {
+          // background-color: $color;
+          // border-color: $color;
+        }
 
-				&.has-#{$name}-background-color:hover {
-					background-color: shade($color, 15%);
-					border-color: shade($color, 15%);
-				}
+        &.has-#{$name}-background-color:hover {
+          background-color: shade($color, 15%);
+          border-color: shade($color, 15%);
+        }
 
-				&.has-#{$name}-background-color:active,
-				&.has-#{$name}-background-color:focus {
-					background-color: shade($color, 20%);
-					border-color: shade($color, 20%);
-				}
-			}
-		}
-	}
+        &.has-#{$name}-background-color:active,
+        &.has-#{$name}-background-color:focus {
+          background-color: shade($color, 20%);
+          border-color: shade($color, 20%);
+        }
+      }
+    }
+  }
 
-	&.is-style-outline {
-		.fleximple-block-button-extended__link {
-			border-radius: var(--space-025);
-			padding: var(--space-100) var(--space-125);
+  &.is-style-outline {
+    .fleximple-block-button-extended__link {
+      border-radius: var(--space-025);
+      padding: var(--space-100) var(--space-125);
 
-			&:not(.has-text-color) {
-				color: var(--gray-800);
+      &:not(.has-text-color) {
+        color: var(--gray-800);
 
-				svg {
-					fill: var(--gray-800);
-				}
+        svg {
+          fill: var(--gray-800);
+        }
 
-				&:hover {
-					color: var(--white-rich);
+        &:hover {
+          color: var(--white-rich);
 
-					svg {
-						fill: var(--white-rich);
-					}
-				}
+          svg {
+            fill: var(--white-rich);
+          }
+        }
 
-				&:active,
-				&:focus {
-					color: var(--white-rich);
+        &:active,
+        &:focus {
+          color: var(--white-rich);
 
-					svg {
-						fill: var(--white-rich);
-					}
-				}
-			}
+          svg {
+            fill: var(--white-rich);
+          }
+        }
+      }
 
-			&:not(.has-background) {
-				background-color: transparent;
-				border-color: var(--gray-800);
+      &:not(.has-background) {
+        background-color: transparent;
+        border-color: var(--gray-800);
 
-				&:hover {
-					background-color: var(--gray-800);
-					border-color: var(--gray-800);
-				}
+        &:hover {
+          background-color: var(--gray-800);
+          border-color: var(--gray-800);
+        }
 
-				&:active,
-				&:focus {
-					background-color: var(--gray-900);
-					border-color: var(--gray-900);
-				}
-			}
+        &:active,
+        &:focus {
+          background-color: var(--gray-900);
+          border-color: var(--gray-900);
+        }
+      }
 
-			@each $name, $color in $colors {
-				&.has-#{$name}-color {
-					// color: $color;
+      @each $name, $color in $colors {
+        &.has-#{$name}-color {
+          // color: $color;
 
-					svg {
-						fill: $color;
-					}
-				}
+          svg {
+            fill: $color;
+          }
+        }
 
-				&.has-#{$name}-color:hover {
-					color: dynamic-text-color($color);
+        &.has-#{$name}-color:hover {
+          color: dynamic-text-color($color);
 
-					svg {
-						fill: dynamic-text-color($color);
-					}
-				}
+          svg {
+            fill: dynamic-text-color($color);
+          }
+        }
 
-				&.has-#{$name}-color:active,
-				&.has-#{$name}-color:focus {
-					color: dynamic-text-color($color);
+        &.has-#{$name}-color:active,
+        &.has-#{$name}-color:focus {
+          color: dynamic-text-color($color);
 
-					svg {
-						fill: dynamic-text-color($color);
-					}
-				}
+          svg {
+            fill: dynamic-text-color($color);
+          }
+        }
 
-				&.has-#{$name}-background-color {
-					background-color: transparent;
-					// border-color: $color;
-				}
+        &.has-#{$name}-background-color {
+          background-color: transparent;
+          // border-color: $color;
+        }
 
-				&.has-#{$name}-background-color:hover {
-					background-color: $color;
-					border-color: $color;
-				}
+        &.has-#{$name}-background-color:hover {
+          background-color: $color;
+          border-color: $color;
+        }
 
-				&.has-#{$name}-background-color:active,
-				&.has-#{$name}-background-color:focus {
-					background-color: shade($color, 10%);
-					border-color: shade($color, 10%);
-				}
-			}
-		}
-	}
+        &.has-#{$name}-background-color:active,
+        &.has-#{$name}-background-color:focus {
+          background-color: shade($color, 10%);
+          border-color: shade($color, 10%);
+        }
+      }
+    }
+  }
 
-	&.is-style-squared {
-		.fleximple-block-button-extended__link {
-			border-radius: 0;
-		}
-	}
+  &.is-style-squared {
+    .fleximple-block-button-extended__link {
+      border-radius: 0;
+    }
+  }
 
-	&.is-style-clear {
-		.fleximple-block-button-extended__link {
-			&:not(.has-text-color) {
-				color: var(--gray-800);
+  &.is-style-clear {
+    .fleximple-block-button-extended__link {
+      &:not(.has-text-color) {
+        color: var(--gray-800);
 
-				svg {
-					fill: var(--gray-800);
-				}
+        svg {
+          fill: var(--gray-800);
+        }
 
-				&:hover {
-					color: var(--color-primary);
+        &:hover {
+          color: var(--color-primary);
 
-					svg {
-						fill: var(--color-primary);
-					}
-				}
+          svg {
+            fill: var(--color-primary);
+          }
+        }
 
-				&:active,
-				&:focus {
-					color: var(--color-primary--dark);
+        &:active,
+        &:focus {
+          color: var(--color-primary--dark);
 
-					svg {
-						fill: var(--color-primary--dark);
-					}
-				}
-			}
+          svg {
+            fill: var(--color-primary--dark);
+          }
+        }
+      }
 
-			&:not(.has-background) {
-				background-color: transparent;
-				border-color: transparent;
-			}
+      &:not(.has-background) {
+        background-color: transparent;
+        border-color: transparent;
+      }
 
-			@each $name, $color in $colors {
-				&.has-#{$name}-color {
-					// color: $color;
+      @each $name, $color in $colors {
+        &.has-#{$name}-color {
+          // color: $color;
 
-					svg {
-						fill: $color;
-					}
-				}
+          svg {
+            fill: $color;
+          }
+        }
 
-				&.has-#{$name}-color:hover {
-					color: shade($color, 15%);
+        &.has-#{$name}-color:hover {
+          color: shade($color, 15%);
 
-					svg {
-						fill: shade($color, 15%);
-					}
-				}
+          svg {
+            fill: shade($color, 15%);
+          }
+        }
 
-				&.has-#{$name}-color:active,
-				&.has-#{$name}-color:focus {
-					color: shade($color, 20%);
+        &.has-#{$name}-color:active,
+        &.has-#{$name}-color:focus {
+          color: shade($color, 20%);
 
-					svg {
-						fill: shade($color, 20%);
-					}
-				}
+          svg {
+            fill: shade($color, 20%);
+          }
+        }
 
-				&.has-#{$name}-background-color {
-					background-color: transparent;
-					border-color: transparent;
-				}
+        &.has-#{$name}-background-color {
+          background-color: transparent;
+          border-color: transparent;
+        }
 
-				&.has-#{$name}-background-color:hover {
-					background-color: transparent;
-					border-color: transparent;
-				}
+        &.has-#{$name}-background-color:hover {
+          background-color: transparent;
+          border-color: transparent;
+        }
 
-				&.has-#{$name}-background-color:active,
-				&.has-#{$name}-background-color:focus {
-					background-color: transparent;
-					border-color: transparent;
-				}
-			}
-		}
-	}
+        &.has-#{$name}-background-color:active,
+        &.has-#{$name}-background-color:focus {
+          background-color: transparent;
+          border-color: transparent;
+        }
+      }
+    }
+  }
 }
 
 /* Container Block */
 .fleximple-block-container {
-	position: relative;
+  position: relative;
 
-	&__wrapper {
-		max-width: var(--site-main__width) !important;
-		padding: 0 var(--space-100);
-	}
+  &__wrapper {
+    max-width: var(--site-main__width) !important;
+    padding: 0 var(--space-100);
+  }
 
-	@media only screen and (min-width: var(--bp-large)) {
-		&__wrapper {
-			padding: 0;
-		}
-	}
+  @media only screen and (min-width: var(--bp-large)) {
+    &__wrapper {
+      padding: 0;
+    }
+  }
 }
 
 /* Header Block */
 .fleximple-block-header {
-	position: relative;
+  position: relative;
 
-	.fleximple-block-header__heading {
-		font-size: var(--text-175);
-	}
+  .fleximple-block-header__heading {
+    font-size: var(--text-175);
+  }
 }
 
 /* Profile Block */
 .fleximple-block-profile {
-	&__figure {
-	}
+  &__figure {
+  }
 
-	&__image {
-	}
+  &__image {
+  }
 
-	&__content {
-	}
+  &__content {
+  }
 
-	&__name {
-	}
+  &__name {
+  }
 
-	&__title {
-		font-size: var(--text-125) !important;
-	}
+  &__title {
+    font-size: var(--text-125) !important;
+  }
 
-	&__description {
-	}
+  &__description {
+  }
 }
 
 /* Post Carousel Block */
@@ -785,83 +783,83 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 /* Slider Block */
 .fleximple-block-slider {
-	&:focus,
-	&:hover {
-		.swiper-button-prev,
-		.swiper-button-next,
-		.swiper-pagination {
-			opacity: 1;
-		}
-	}
+  &:focus,
+  &:hover {
+    .swiper-button-prev,
+    .swiper-button-next,
+    .swiper-pagination {
+      opacity: 1;
+    }
+  }
 
-	.swiper-button-prev,
-	.swiper-button-next,
-	.swiper-pagination {
-		opacity: 0;
-		transition: opacity 0.3s ease;
-	}
+  .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-pagination {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 
-	.swiper-pagination-fraction,
-	.swiper-pagination-custom,
-	.swiper-container-horizontal > .swiper-pagination-bullets {
-		bottom: 0;
-	}
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 0;
+  }
 
-	.swiper-pagination-bullet {
-		width: rem(10px);
-		height: rem(10px);
+  .swiper-pagination-bullet {
+    width: rem(10px);
+    height: rem(10px);
 
-		&-active {
-			background: var(--color-primary);
-		}
-	}
+    &-active {
+      background: var(--color-primary);
+    }
+  }
 }
 
 /* Testimonial Block */
 .fleximple-block-testimonial {
-	&__icon {
-	}
+  &__icon {
+  }
 
-	&__quote {
-	}
+  &__quote {
+  }
 
-	&__figure {
-	}
+  &__figure {
+  }
 
-	&__image {
-	}
+  &__image {
+  }
 
-	&__citation {
-	}
+  &__citation {
+  }
 }
 
 /* Modal Window */
 .fleximple-modal-container {
-	&.is-visible {
-	}
+  &.is-visible {
+  }
 
-	.fleximple-modal {
-		&__close-button {
-		}
-	}
+  .fleximple-modal {
+    &__close-button {
+    }
+  }
 
-	@media only screen and (max-width: calc(var(--bp-medium) - 1px)) {
-		.fleximple-modal {
-			height: 88vh !important;
-			width: 80vw;
-			margin: 6vh auto !important;
+  @media only screen and (max-width: calc(var(--bp-medium) - 1px)) {
+    .fleximple-modal {
+      height: 88vh !important;
+      width: 80vw;
+      margin: 6vh auto !important;
 
-			&__close-button {
-			}
-		}
-	}
+      &__close-button {
+      }
+    }
+  }
 
-	@media only screen and (min-width: var(--bp-medium)) {
-		.fleximple-modal {
-			&__close-button {
-				top: rem(32px);
-				right: rem(32px);
-			}
-		}
-	}
+  @media only screen and (min-width: var(--bp-medium)) {
+    .fleximple-modal {
+      &__close-button {
+        top: rem(32px);
+        right: rem(32px);
+      }
+    }
+  }
 }

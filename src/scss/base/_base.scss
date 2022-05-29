@@ -5,22 +5,22 @@
  ----------------------------------------------*/
 
 html {
-	box-sizing: border-box;
-	height: 100%;
+  box-sizing: border-box;
+  height: 100%;
 }
 
 *,
 *::before,
 *::after {
-	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
 }
 
 body {
-	font-family: var(--body__font-family);
-	font-size: var(--body__font-size);
-	line-height: var(--body__line-height);
-	color: var(--text__color);
-	background-color: var(--body__background-color);
-	height: 100%;
+  font-family: var(--body__font-family);
+  font-size: var(--body__font-size);
+  line-height: var(--body__line-height);
+  color: var(--text__color);
+  background-color: var(--body__background-color);
+  height: 100%;
 }

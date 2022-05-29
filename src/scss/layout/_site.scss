@@ -8,155 +8,155 @@
  # CONTENT
  ---------------------*/
 .site {
-	max-width: 100%;
-	min-height: 100%;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
+  max-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .site-main {
-	background-color: var(--site-main__background-color);
-	padding: var(--site-main__padding);
-	margin: var(--site-main__margin);
-	flex: 2;
+  background-color: var(--site-main__background-color);
+  padding: var(--site-main__padding);
+  margin: var(--site-main__margin);
+  flex: 2;
 
-	.primary-content {
-		background-color: $site-main__primary-content__background-color;
-		width: $site-main__primary-content__width;
-		max-width: $site-main__primary-content__max-width;
-		padding: $site-main__primary-content__padding;
-		margin: $site-main__primary-content__margin;
-	}
+  .primary-content {
+    background-color: $site-main__primary-content__background-color;
+    width: $site-main__primary-content__width;
+    max-width: $site-main__primary-content__max-width;
+    padding: $site-main__primary-content__padding;
+    margin: $site-main__primary-content__margin;
+  }
 }
 
 .container {
-	max-width: 100%;
-	margin: 0 auto;
-	transition: padding 0.3s ease;
+  max-width: 100%;
+  margin: 0 auto;
+  transition: padding 0.3s ease;
 
-	.container {
-		width: 100%;
-	}
+  .container {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: var(--bp-small)) {
-	.container {
-		max-width: var(--container__max-width--small);
-	}
+  .container {
+    max-width: var(--container__max-width--small);
+  }
 
-	.site-main {
-		padding: var(--site-main__padding--small);
-		margin: var(--site-main__margin--small);
+  .site-main {
+    padding: var(--site-main__padding--small);
+    margin: var(--site-main__margin--small);
 
-		.primary-content {
-			@if ($site-main__primary-content__padding--small != null) {
-				padding: $site-main__primary-content__padding--small;
-			}
-			@if ($site-main__primary-content__margin--small != null) {
-				margin: $site-main__primary-content__margin--small;
-			}
-		}
-	}
+    .primary-content {
+      @if ($site-main__primary-content__padding--small != null) {
+        padding: $site-main__primary-content__padding--small;
+      }
+      @if ($site-main__primary-content__margin--small != null) {
+        margin: $site-main__primary-content__margin--small;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: var(--bp-medium)) {
-	.container {
-		max-width: var(--container__max-width--medium);
-	}
+  .container {
+    max-width: var(--container__max-width--medium);
+  }
 
-	.site-main {
-		padding: var(--site-main__padding--medium);
-		margin: var(--site-main__margin--medium);
+  .site-main {
+    padding: var(--site-main__padding--medium);
+    margin: var(--site-main__margin--medium);
 
-		.primary-content {
-			@if ($site-main__primary-content__padding--medium != null) {
-				padding: $site-main__primary-content__padding--medium;
-			}
-			@if ($site-main__primary-content__margin--medium != null) {
-				margin: $site-main__primary-content__margin--medium;
-			}
-		}
-	}
+    .primary-content {
+      @if ($site-main__primary-content__padding--medium != null) {
+        padding: $site-main__primary-content__padding--medium;
+      }
+      @if ($site-main__primary-content__margin--medium != null) {
+        margin: $site-main__primary-content__margin--medium;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: var(--bp-large)) {
-	.container {
-		max-width: var(--container__max-width--large);
-	}
+  .container {
+    max-width: var(--container__max-width--large);
+  }
 
-	.site-main {
-		padding: var(--site-main__padding--large);
-		margin: var(--site-main__margin--large);
+  .site-main {
+    padding: var(--site-main__padding--large);
+    margin: var(--site-main__margin--large);
 
-		.primary-content {
-			@if ($site-main__primary-content__padding--large != null) {
-				padding: $site-main__primary-content__padding--large;
-			}
-			@if ($site-main__primary-content__margin--large != null) {
-				margin: $site-main__primary-content__margin--large;
-			}
-		}
-	}
+    .primary-content {
+      @if ($site-main__primary-content__padding--large != null) {
+        padding: $site-main__primary-content__padding--large;
+      }
+      @if ($site-main__primary-content__margin--large != null) {
+        margin: $site-main__primary-content__margin--large;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: var(--bp-xlarge)) {
-	.container {
-		max-width: var(--container__max-width--xlarge);
-	}
+  .container {
+    max-width: var(--container__max-width--xlarge);
+  }
 }
 
 /*----------------------
  # POSTS AND PAGES
  ---------------------*/
 .sticky {
-	display: block;
+  display: block;
 }
 
 .hentry {
-	.entry-meta {
-		color: var(--text__color--subtle);
+  .entry-meta {
+    color: var(--text__color--subtle);
 
-		a {
-			color: var(--text__color--subtle);
+    a {
+      color: var(--text__color--subtle);
 
-			&:focus,
-			&:hover {
-				color: var(--gray-800);
-			}
-		}
+      &:focus,
+      &:hover {
+        color: var(--gray-800);
+      }
+    }
 
-		& > * {
-			display: inline-block;
-		}
+    & > * {
+      display: inline-block;
+    }
 
-		.entry-byline,
-		.entry-date {
-			font-size: rem(14px);
-		}
+    .entry-byline,
+    .entry-date {
+      font-size: rem(14px);
+    }
 
-		.entry-byline::after {
-			content: "\00b7";
-			margin-left: var(--space-025);
-			margin-right: var(--space-025);
-		}
-	}
+    .entry-byline::after {
+      content: "\00b7";
+      margin-left: var(--space-025);
+      margin-right: var(--space-025);
+    }
+  }
 
-	.entry-share-buttons {
-		list-style: none;
-		padding-left: 0;
-		margin-bottom: 0;
-		display: flex;
-		font-size: var(--text-125);
+  .entry-share-buttons {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    font-size: var(--text-125);
 
-		.entry-share-button {
-			a {
-				padding: var(--space-025);
-			}
-		}
-	}
+    .entry-share-button {
+      a {
+        padding: var(--space-025);
+      }
+    }
+  }
 }
 
 .updated:not(.published) {
-	display: none;
+  display: none;
 }

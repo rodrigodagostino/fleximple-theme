@@ -10,66 +10,67 @@ button:not(.wp-hide-pw),
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	display: inline-block;
-	font-family: inherit;
-	color: $button__color;
-	line-height: 1;
-	background-color: $button__background-color;
-	border: none;
-	border-radius: $button__border-radius;
-	@if ($button__box-shadow != null) {
-		box-shadow: $button__box-shadow;
-	}
-	padding: $button__padding;
-	transition: color 0.2s ease, background-color 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
-	-webkit-appearance: none;
-	cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  color: $button__color;
+  line-height: 1;
+  background-color: $button__background-color;
+  border: none;
+  border-radius: $button__border-radius;
+  @if ($button__box-shadow != null) {
+    box-shadow: $button__box-shadow;
+  }
+  padding: $button__padding;
+  transition: color 0.2s ease, background-color 0.2s ease, border 0.2s ease,
+    box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  cursor: pointer;
 
-	&:hover {
-		color: $button__color--hover;
-		background-color: $button__background-color--hover;
-		@if ($button__box-shadow--hover != null) {
-			box-shadow: $button__box-shadow--hover;
-		}
-	}
+  &:hover {
+    color: $button__color--hover;
+    background-color: $button__background-color--hover;
+    @if ($button__box-shadow--hover != null) {
+      box-shadow: $button__box-shadow--hover;
+    }
+  }
 
-	&:focus {
-		color: $button__color--focus;
-		background-color: $button__background-color--focus;
-		@if ($button__box-shadow--focus != null) {
-			box-shadow: $button__box-shadow--focus;
-		}
-		outline: none;
-	}
+  &:focus {
+    color: $button__color--focus;
+    background-color: $button__background-color--focus;
+    @if ($button__box-shadow--focus != null) {
+      box-shadow: $button__box-shadow--focus;
+    }
+    outline: none;
+  }
 
-	&:active {
-		color: $button__color--active;
-		background-color: $button__background-color--active;
-		@if ($button__box-shadow--active != null) {
-			box-shadow: $button__box-shadow--active;
-		}
-	}
+  &:active {
+    color: $button__color--active;
+    background-color: $button__background-color--active;
+    @if ($button__box-shadow--active != null) {
+      box-shadow: $button__box-shadow--active;
+    }
+  }
 
-	&:disabled,
-	&[disabled] {
-		cursor: not-allowed;
-		opacity: 0.65;
+  &:disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.65;
 
-		&:hover {
-			background-color: var(--gray-800);
-			border-color: var(--gray-800);
-		}
-	}
+    &:hover {
+      background-color: var(--gray-800);
+      border-color: var(--gray-800);
+    }
+  }
 
-	svg {
-		width: auto;
-		height: var(--space-125);
-	}
+  svg {
+    width: auto;
+    height: var(--space-125);
+  }
 }
 
 label {
-	font-size: $label__font-size;
-	color: $label__color;
+  font-size: $label__font-size;
+  color: $label__color;
 }
 
 input[type="text"]:not([value="Read more"]):not([role="combobox"]),
@@ -87,205 +88,207 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea:not(.editor-post-title__input):not(.editor-default-block-appender__content):not(.editor-plain-text) {
-	font-size: $input__font-size;
-	color: var(--text__color);
-	background-color: $input__background-color;
-	border-top: $input__border-top;
-	border-right: $input__border-right;
-	border-bottom: $input__border-bottom;
-	border-left: $input__border-left;
-	border-radius: $input__border-radius;
-	width: 100%;
-	padding: $input__padding;
-	margin-bottom: var(--space-050);
-	box-shadow: $input__box-shadow;
-	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  font-size: $input__font-size;
+  color: var(--text__color);
+  background-color: $input__background-color;
+  border-top: $input__border-top;
+  border-right: $input__border-right;
+  border-bottom: $input__border-bottom;
+  border-left: $input__border-left;
+  border-radius: $input__border-radius;
+  width: 100%;
+  padding: $input__padding;
+  margin-bottom: var(--space-050);
+  box-shadow: $input__box-shadow;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
 
-	&:focus {
-		background-color: $input__background-color--focus;
-		border-top: $input__border-top--focus;
-		border-right: $input__border-right--focus;
-		border-bottom: $input__border-bottom--focus;
-		border-left: $input__border-left--focus;
-		box-shadow: $input__box-shadow--focus;
-		outline: none;
-	}
+  &:focus {
+    background-color: $input__background-color--focus;
+    border-top: $input__border-top--focus;
+    border-right: $input__border-right--focus;
+    border-bottom: $input__border-bottom--focus;
+    border-left: $input__border-left--focus;
+    box-shadow: $input__box-shadow--focus;
+    outline: none;
+  }
 
-	&::placeholder {
-		color: var(--gray-400);
-	}
+  &::placeholder {
+    color: var(--gray-400);
+  }
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-	appearance: none;
-	width: $checkbox-radio__width;
-	height: $checkbox-radio__height;
-	margin-right: var(--space-025);
-	border: $checkbox-radio__border;
-	background-color: $checkbox-radio__background-color;
-	box-shadow: $checkbox-radio__box-shadow;
-	vertical-align: middle;
-	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  appearance: none;
+  width: $checkbox-radio__width;
+  height: $checkbox-radio__height;
+  margin-right: var(--space-025);
+  border: $checkbox-radio__border;
+  background-color: $checkbox-radio__background-color;
+  box-shadow: $checkbox-radio__box-shadow;
+  vertical-align: middle;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
 
-	&:checked {
-		background-color: $checkbox-radio__background-color--checked;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-		border: $checkbox-radio__border--checked;
-	}
+  &:checked {
+    background-color: $checkbox-radio__background-color--checked;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: $checkbox-radio__border--checked;
+  }
 
-	&:focus {
-		box-shadow: $checkbox-radio__box-shadow--focus;
-		outline: 0;
-	}
+  &:focus {
+    box-shadow: $checkbox-radio__box-shadow--focus;
+    outline: 0;
+  }
 }
 
 input[type="checkbox"] {
-	border-radius: $checkbox__border-radius;
+  border-radius: $checkbox__border-radius;
 
-	&:checked {
-		background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3e%3cpath fill="none" stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 10l3 3l6-6"/%3e%3c/svg%3e');
-	}
+  &:checked {
+    background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3e%3cpath fill="none" stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 10l3 3l6-6"/%3e%3c/svg%3e');
+  }
 }
 
 input[type="radio"] {
-	border-radius: 100px;
+  border-radius: 100px;
 
-	&:checked {
-		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
-	}
+  &:checked {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  }
 }
 
 select {
-	border: 2px solid var(--gray-100);
+  border: 2px solid var(--gray-100);
 }
 
 textarea:not(.editor-post-title__input):not(.editor-default-block-appender__content):not(.editor-plain-text) {
-	width: 100%;
-	height: rem(180px);
-	padding: $text-area__padding;
+  width: 100%;
+  height: rem(180px);
+  padding: $text-area__padding;
 }
 
 .search-form {
-	display: flex;
-	position: relative;
-	padding: $search-form__padding;
-	margin: $search-form__margin;
+  display: flex;
+  position: relative;
+  padding: $search-form__padding;
+  margin: $search-form__margin;
 
-	label {
-		flex: 1;
-	}
+  label {
+    flex: 1;
+  }
 
-	.search-field {
-		height: 100%;
-		font-size: $search-form__input__font-size;
-		padding: $search-form__input__padding;
-		margin: $search-form__input__margin;
-	}
+  .search-field {
+    height: 100%;
+    font-size: $search-form__input__font-size;
+    padding: $search-form__input__padding;
+    margin: $search-form__input__margin;
+  }
 
-	.search-submit {
-		color: $search-form__button__color;
-		background-color: $search-form__button__background-color;
-		height: $search-form__button__height;
-		padding: $search-form__button__padding;
-		margin: $search-form__button__margin;
-		border-radius: $search-form__button__border-radius;
-		position: absolute;
-		top: 0;
-		right: 0;
+  .search-submit {
+    color: $search-form__button__color;
+    background-color: $search-form__button__background-color;
+    height: $search-form__button__height;
+    padding: $search-form__button__padding;
+    margin: $search-form__button__margin;
+    border-radius: $search-form__button__border-radius;
+    position: absolute;
+    top: 0;
+    right: 0;
 
-		i {
-			font-size: $search-form__button__icon__font-size;
-		}
+    i {
+      font-size: $search-form__button__icon__font-size;
+    }
 
-		&:focus {
-			color: $search-form__button__color--focus;
-			background-color: $search-form__button__background-color--focus;
-		}
+    &:focus {
+      color: $search-form__button__color--focus;
+      background-color: $search-form__button__background-color--focus;
+    }
 
-		&:hover {
-			color: $search-form__button__color--hover;
-			background-color: $search-form__button__background-color--hover;
-		}
+    &:hover {
+      color: $search-form__button__color--hover;
+      background-color: $search-form__button__background-color--hover;
+    }
 
-		&:active {
-			color: $search-form__button__color--active;
-			background-color: $search-form__button__background-color--active;
-		}
-	}
+    &:active {
+      color: $search-form__button__color--active;
+      background-color: $search-form__button__background-color--active;
+    }
+  }
 }
 
 .tooltip {
-	position: absolute;
-	bottom: calc(100% + var(--space-075));
-	left: 0;
-	background-color: $tooltip__background-color;
-	font-size: $tooltip__font-size;
-	color: $tooltip__color;
-	padding: $tooltip__padding;
-	max-width: 100vw;
-	z-index: 10;
+  position: absolute;
+  bottom: calc(100% + var(--space-075));
+  left: 0;
+  background-color: $tooltip__background-color;
+  font-size: $tooltip__font-size;
+  color: $tooltip__color;
+  padding: $tooltip__padding;
+  max-width: 100vw;
+  z-index: 10;
 
-	&::before {
-		content: "";
-		position: absolute;
-		top: 100%;
-		left: var(--space-100);
-		width: var(--space-075);
-		height: var(--space-075);
-		transform: translateY(-50%) rotate(45deg);
-		background-color: $tooltip__background-color;
-	}
+  &::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: var(--space-100);
+    width: var(--space-075);
+    height: var(--space-075);
+    transform: translateY(-50%) rotate(45deg);
+    background-color: $tooltip__background-color;
+  }
 
-	&--down {
-		top: calc(100% + var(--space-075));
-		bottom: auto;
+  &--down {
+    top: calc(100% + var(--space-075));
+    bottom: auto;
 
-		&::before {
-			top: 0;
-			bottom: auto;
-		}
-	}
+    &::before {
+      top: 0;
+      bottom: auto;
+    }
+  }
 
-	&--left {
-		top: 50%;
-		right: calc(100% + var(--space-075));
-		bottom: auto;
-		left: auto;
-		transform: translate3d(0, -50%, 0);
+  &--left {
+    top: 50%;
+    right: calc(100% + var(--space-075));
+    bottom: auto;
+    left: auto;
+    transform: translate3d(0, -50%, 0);
 
-		&::before {
-			top: 50%;
-			right: 0;
-			bottom: auto;
-			left: auto;
-			transform: translate(50%, -50%) rotate(45deg);
-		}
-	}
+    &::before {
+      top: 50%;
+      right: 0;
+      bottom: auto;
+      left: auto;
+      transform: translate(50%, -50%) rotate(45deg);
+    }
+  }
 
-	&--right {
-		top: 50%;
-		bottom: auto;
-		left: calc(100% + var(--space-075));
-		transform: translate3d(0, -50%, 0);
+  &--right {
+    top: 50%;
+    bottom: auto;
+    left: calc(100% + var(--space-075));
+    transform: translate3d(0, -50%, 0);
 
-		&::before {
-			top: 50%;
-			bottom: auto;
-			left: 0;
-			transform: translate(-50%, -50%) rotate(45deg);
-		}
-	}
+    &::before {
+      top: 50%;
+      bottom: auto;
+      left: 0;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
 }
 
 .backdrop {
-	background-color: $backdrop__background-color;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 50;
+  background-color: $backdrop__background-color;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
 }

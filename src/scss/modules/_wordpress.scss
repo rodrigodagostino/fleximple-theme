@@ -5,19 +5,19 @@
  ----------------------------------------------*/
 
 body.logged-in {
-	.collapsible-navigation {
-		&.is-fixed {
-			top: rem(46px);
-		}
-	}
+  .collapsible-navigation {
+    &.is-fixed {
+      top: rem(46px);
+    }
+  }
 }
 
 @media only screen and (min-width: 48.9375em) {
-	body.logged-in {
-		.collapsible-navigation {
-			&.is-fixed {
-				top: rem(32px);
-			}
-		}
-	}
+  body.logged-in {
+    .collapsible-navigation {
+      &.is-fixed {
+        top: rem(32px);
+      }
+    }
+  }
 }

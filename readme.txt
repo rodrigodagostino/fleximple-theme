@@ -3,8 +3,8 @@
 Contributors: everyone welcome
 Tags: translation-ready
 
-Requires at least: 4.0
-Tested up to: 4.8
+Requires at least: 5.8
+Tested up to: 6.0
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE

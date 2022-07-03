@@ -12,12 +12,12 @@
  * @return array
  */
 function fleximpletheme_body_classes( $classes ) {
-	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
-	}
+  // Adds a class of hfeed to non-singular pages.
+  if ( ! is_singular() ) {
+    $classes[] = 'hfeed';
+  }
 
-	return $classes;
+  return $classes;
 }
 add_filter( 'body_class', 'fleximpletheme_body_classes' );
 
@@ -26,9 +26,9 @@ add_filter( 'body_class', 'fleximpletheme_body_classes' );
  * Add a pingback url auto-discovery header for singularly identifiable entrys.
  */
 function fleximpletheme_pingback_header() {
-	if ( is_singular() && pings_open() ) {
-		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
-	}
+  if ( is_singular() && pings_open() ) {
+    echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
+  }
 }
 add_action( 'wp_head', 'fleximpletheme_pingback_header' );
 
@@ -37,7 +37,7 @@ add_action( 'wp_head', 'fleximpletheme_pingback_header' );
  * Customize archive page titles.
  */
 add_filter( 'get_the_archive_title', function ( $title ) {
-	$title = str_replace( ': ', ': <em>', $title ) . '</em>';
+  $title = str_replace( ': ', ': <em>', $title ) . '</em>';
     return $title;
 } );
 
@@ -49,7 +49,7 @@ function fleximpletheme_login_logo_url() {
     return home_url();
 }
 add_filter( 'login_headerurl', 'fleximpletheme_login_logo_url' );
- 
+
 function fleximpletheme_login_logo_url_title() {
     return get_bloginfo( 'name' );
 }

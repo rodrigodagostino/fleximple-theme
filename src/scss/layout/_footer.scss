@@ -52,8 +52,12 @@
 
     &:focus,
     &:hover {
-      svg path {
-        fill: $footer-logo__fill--hover;
+      svg {
+        circle,
+        path,
+        rect {
+          fill: $footer-logo__fill--hover;
+        }
       }
     }
   }

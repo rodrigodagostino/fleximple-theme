@@ -12,39 +12,39 @@ const PostKickerMetaBox = () => {
   const {
     meta,
     meta: { kicker },
-  } = useSelect( ( select ) => ({
-    meta: select( 'core/editor' ).getEditedPostAttribute( 'meta' ) || {},
-  }) )
+  } = useSelect((select) => ({
+    meta: select('core/editor').getEditedPostAttribute('meta') || {},
+  }))
 
-  const { editPost } = useDispatch( 'core/editor' )
+  const { editPost } = useDispatch('core/editor')
 
-  const [ kickerValue, setKickerValue ] = useState( kicker )
+  const [kickerValue, setKickerValue] = useState(kicker)
 
-  useEffect( () => {
+  useEffect(() => {
     editPost({
       meta: {
         ...meta,
         kicker: kickerValue,
       },
     })
-  }, [ kickerValue ] )
+  }, [kickerValue])
 
   return (
     <PluginDocumentSettingPanel
       name="post-kicker-meta-box"
-      title={ __( 'Kicker', 'fleximpletheme' ) }
+      title={__('Kicker', 'fleximpletheme')}
     >
       <TextControl
-        label={ __( 'Write a kicker', 'fleximpletheme' ) }
-        value={ kickerValue }
-        onChange={ setKickerValue }
+        label={__('Write a kicker', 'fleximpletheme')}
+        value={kickerValue}
+        onChange={setKickerValue}
       />
     </PluginDocumentSettingPanel>
   )
 }
 
-if ( window.pagenow === 'post' ) {
-  registerPlugin( 'kicker', {
+if (window.pagenow === 'post') {
+  registerPlugin('kicker', {
     render: PostKickerMetaBox,
     icon: null,
   })

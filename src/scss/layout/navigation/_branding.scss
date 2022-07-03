@@ -17,8 +17,12 @@
     width: $logo__width;
     height: $logo__height;
     vertical-align: top; // Removes blank space below.
+  }
 
-    path {
+  svg {
+    circle,
+    path,
+    rect {
       fill: $logo__fill;
       transition: fill 0.3s ease;
     }
@@ -26,8 +30,12 @@
 
   &:focus,
   &:hover {
-    svg path {
-      fill: $logo__fill--hover;
+    svg {
+      circle,
+      path,
+      rect {
+        fill: $logo__fill--hover;
+      }
     }
   }
 }

@@ -39,8 +39,12 @@
       width: $footer-logo__width;
       height: $footer-logo__height;
       vertical-align: top; // Removes blank space below.
+    }
 
-      path {
+    svg {
+      circle,
+      path,
+      rect {
         fill: $footer-logo__fill;
         transition: fill 0.3s ease;
       }

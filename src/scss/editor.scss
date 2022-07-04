@@ -18,29 +18,13 @@
 @import "abstracts/configuration";
 
 .edit-post-layout {
-  .wp-block,
-  .components-placeholder {
-    max-width: var(--site-main__width);
-
-    &[data-align="wide"] {
-      max-width: calc(var(--site-main__width) * 1.2);
+  .editor-styles-wrapper {
+    .edit-post-visual-editor__post-title-wrapper
+      > :where(:not(.alignleft):not(.alignright)),
+    .block-editor-block-list__layout.is-root-container
+      > :where(:not(.alignleft):not(.alignright)) {
+      max-width: var(--site-main__width);
     }
-
-    &[data-align="full"] {
-      max-width: none;
-    }
-  }
-
-  .components-placeholder {
-    max-width: var(--site-main__width);
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-body.post-type-post {
-  .edit-post-layout .wp-block {
-    max-width: rem(680px);
   }
 }
 

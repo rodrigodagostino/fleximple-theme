@@ -28,6 +28,12 @@
   }
 }
 
+body.post-type-post {
+  .edit-post-layout .editor-styles-wrapper .wp-block {
+    max-width: calc(var(--site-main__width) - 28% - var(--site-main__gap));
+  }
+}
+
 .edit-post-visual-editor .editor-styles-wrapper {
   font-family: var(--body__font-family);
   font-size: $single__entry-content__font-size;

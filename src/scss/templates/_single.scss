@@ -121,6 +121,10 @@ body.page:not(.page-template-front-page) {
   .entry-featured-figure {
     margin-left: calc(#{$site-main__primary-content__padding} * -1);
     margin-right: calc(#{$site-main__primary-content__padding} * -1);
+
+    img {
+      width: 100%;
+    }
   }
 
   .entry-figure-caption:empty {

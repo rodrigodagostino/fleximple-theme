@@ -31,7 +31,7 @@ body.search-results {
   }
 
   .hentry + .hentry {
-    margin-top: var(--space-125);
+    margin-top: var(--space-150);
   }
 
   .entry-media {
@@ -53,6 +53,10 @@ body.search-results {
       z-index: 1;
       position: relative;
     }
+  }
+
+  .entry-media + .entry-content {
+    margin-left: var(--space-100);
   }
 
   .entry-meta {

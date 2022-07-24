@@ -119,6 +119,7 @@ body.page:not(.page-template-front-page) {
   }
 
   .entry-featured-figure {
+    margin-top: var(--space-125);
     margin-left: calc(#{$site-main__primary-content__padding} * -1);
     margin-right: calc(#{$site-main__primary-content__padding} * -1);
 

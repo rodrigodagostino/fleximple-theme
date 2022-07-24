@@ -114,6 +114,10 @@
 }
 
 .hentry {
+  .entry-meta-share-buttons-wrapper {
+    margin-top: var(--space-125);
+  }
+
   .entry-meta {
     color: var(--text__color--subtle);
 
@@ -147,6 +151,7 @@
     padding-left: 0;
     margin-bottom: 0;
     display: flex;
+    justify-content: center;
     font-size: var(--text-125);
 
     .entry-share-button {

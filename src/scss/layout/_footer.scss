@@ -249,7 +249,7 @@
     & > * + * {
       margin-top: 0;
       @if ($site-footer__top__widget__gap--medium != null) {
-        margin-right: $site-footer__top__widget__gap--medium;
+        margin-left: $site-footer__top__widget__gap--medium;
       }
     }
 

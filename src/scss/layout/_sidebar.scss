@@ -14,7 +14,7 @@
   }
 
   .widget + .widget {
-    margin-top: $site-main__secondary-content__widget-gap;
+    margin-top: $site-main__secondary-content__widget__gap;
   }
 
   .widget-title {
@@ -39,9 +39,9 @@
       margin: $site-main__secondary-content__margin--small;
     }
 
-    @if ($site-main__secondary-content__widget-gap--small != null) {
+    @if ($site-main__secondary-content__widget__gap--small != null) {
       .widget + .widget {
-        margin-top: $site-main__secondary-content__widget-gap--small;
+        margin-top: $site-main__secondary-content__widget__gap--small;
       }
     }
   }
@@ -66,9 +66,9 @@
       margin: $site-main__secondary-content__margin--medium;
     }
 
-    @if ($site-main__secondary-content__widget-gap--medium != null) {
+    @if ($site-main__secondary-content__widget__gap--medium != null) {
       .widget + .widget {
-        margin-top: $site-main__secondary-content__widget-gap--medium;
+        margin-top: $site-main__secondary-content__widget__gap--medium;
       }
     }
   }
@@ -84,9 +84,9 @@
       margin: $site-main__secondary-content__margin--large;
     }
 
-    @if ($site-main__secondary-content__widget-gap--large != null) {
+    @if ($site-main__secondary-content__widget__gap--large != null) {
       .widget + .widget {
-        margin-top: $site-main__secondary-content__widget-gap--large;
+        margin-top: $site-main__secondary-content__widget__gap--large;
       }
     }
   }

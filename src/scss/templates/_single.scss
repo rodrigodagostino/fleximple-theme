@@ -187,6 +187,20 @@ body.page:not(.page-template-front-page) {
 }
 
 @media only screen and (min-width: var(--bp-small)) {
+  @if ($single__entry-content__gap--small != null) {
+    body.single,
+    body.page,
+    body.search,
+    body.error404 {
+      .entry-content,
+      .page-content {
+        & > * + * {
+          margin-top: $single__entry-content__gap--small;
+        }
+      }
+    }
+  }
+
   body.single,
   body.page:not(.page-template-front-page) {
     .entry-header {
@@ -256,6 +270,20 @@ body.page:not(.page-template-front-page) {
 }
 
 @media only screen and (min-width: var(--bp-medium)) {
+  @if ($single__entry-content__gap--medium != null) {
+    body.single,
+    body.page,
+    body.search,
+    body.error404 {
+      .entry-content,
+      .page-content {
+        & > * + * {
+          margin-top: $single__entry-content__gap--medium;
+        }
+      }
+    }
+  }
+
   body.single,
   body.page:not(.page-template-front-page) {
     .entry-header {
@@ -323,6 +351,20 @@ body.page:not(.page-template-front-page) {
 }
 
 @media only screen and (min-width: var(--bp-large)) {
+  @if ($single__entry-content__gap--large != null) {
+    body.single,
+    body.page,
+    body.search,
+    body.error404 {
+      .entry-content,
+      .page-content {
+        & > * + * {
+          margin-top: $single__entry-content__gap--large;
+        }
+      }
+    }
+  }
+
   body.single,
   body.page:not(.page-template-front-page) {
     .entry-header {

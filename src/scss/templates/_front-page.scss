@@ -4,7 +4,8 @@
 
  ----------------------------------------------*/
 
-body.page-template-front-page {
+body.page-template-front-page,
+body.page-template-front-page-with-sidebar {
   .page-title {
     // Display only for screen readers.
     clip: rect(1px, 1px, 1px, 1px);
@@ -13,5 +14,11 @@ body.page-template-front-page {
     width: 1px;
     overflow: hidden;
     word-wrap: normal !important;
+  }
+
+  .page-content {
+    & > * + * {
+      margin-top: var(--space-125);
+    }
   }
 }

@@ -32,7 +32,7 @@
 
   .site-logo {
     padding: $footer-logo__padding;
-    display: inline-block;
+    display: flex;
 
     img,
     svg {

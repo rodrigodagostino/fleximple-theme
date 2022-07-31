@@ -71,7 +71,7 @@ body.single {
 }
 
 body.single,
-body.page:not(.page-template-front-page) {
+body.page:not(.page-template-front-page):not(.page-template-front-page-with-sidebar) {
   .entry-header,
   .entry-footer,
   .post-navigation,
@@ -202,7 +202,7 @@ body.page:not(.page-template-front-page) {
   }
 
   body.single,
-  body.page:not(.page-template-front-page) {
+  body.page:not(.page-template-front-page):not(.page-template-front-page-with-sidebar) {
     .entry-header {
     }
 
@@ -285,7 +285,7 @@ body.page:not(.page-template-front-page) {
   }
 
   body.single,
-  body.page:not(.page-template-front-page) {
+  body.page:not(.page-template-front-page):not(.page-template-front-page-with-sidebar) {
     .entry-header {
     }
 
@@ -366,7 +366,7 @@ body.page:not(.page-template-front-page) {
   }
 
   body.single,
-  body.page:not(.page-template-front-page) {
+  body.page:not(.page-template-front-page):not(.page-template-front-page-with-sidebar) {
     .entry-header {
     }
 
@@ -428,7 +428,7 @@ body.page:not(.page-template-front-page) {
 
 @media only screen and (min-width: var(--bp-xlarge)) {
   body.single,
-  body.page:not(.page-template-front-page) {
+  body.page:not(.page-template-front-page):not(.page-template-front-page-with-sidebar) {
     .entry-header {
     }
 

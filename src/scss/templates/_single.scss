@@ -132,6 +132,10 @@ body.page:not(.page-template-front-page):not(.page-template-front-page-with-side
     display: none;
   }
 
+  .entry-header + .entry-content {
+    margin-top: var(--space-125);
+  }
+
   .entry-footer {
     color: var(--text__color--subtle);
     padding: $single__entry-footer__padding;

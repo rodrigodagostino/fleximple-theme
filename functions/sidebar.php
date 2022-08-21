@@ -1,7 +1,8 @@
 <?php
 // Sidebars and widgetized areas
-function fleximpletheme_register_sidebars() {
-  register_sidebar( array(
+function fleximpletheme_register_sidebars()
+{
+  register_sidebar(array(
     'id'            => 'sidebar',
     'name'          => __('Sidebar', 'fleximpletheme'),
     'description'   => __('The primary sidebar.', 'fleximpletheme'),
@@ -9,9 +10,9 @@ function fleximpletheme_register_sidebars() {
     'after_widget'  => '</aside>',
     'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>',
-  ) );
+  ));
 
-  register_sidebar( array(
+  register_sidebar(array(
     'id'            => 'footer-1',
     'name'          => __('Footer Area 1', 'fleximpletheme'),
     'description'   => __('The first footer sidebar area.', 'fleximpletheme'),
@@ -19,9 +20,9 @@ function fleximpletheme_register_sidebars() {
     'after_widget'  => '</div>',
     'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>',
-  ) );
+  ));
 
-  register_sidebar( array(
+  register_sidebar(array(
     'id'            => 'footer-2',
     'name'          => __('Footer Area 2', 'fleximpletheme'),
     'description'   => __('The second footer sidebar area.', 'fleximpletheme'),
@@ -29,7 +30,7 @@ function fleximpletheme_register_sidebars() {
     'after_widget'  => '</div>',
     'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>',
-  ) );
+  ));
 
   /*
   to add more sidebars or widgetized areas, just copy
@@ -57,4 +58,4 @@ function fleximpletheme_register_sidebars() {
   */
 } /* end register sidebars */
 
-add_action( 'widgets_init', 'fleximpletheme_register_sidebars' );
+add_action('widgets_init', 'fleximpletheme_register_sidebars');

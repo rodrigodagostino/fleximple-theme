@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template for displaying search forms
  *
@@ -15,5 +16,5 @@
     <span class="sr-only"><?php echo _x('Search', 'submit button', 'fleximpletheme'); ?></span>
     <i class="icon-magnifying-glass"></i>
   </button>
-  <div class="tooltip tooltip--down animate-fade-in"><span><?php _e( 'This field cannot be empty.', 'fleximpletheme' ); ?></span></div>
+  <div class="tooltip tooltip--down animate-fade-in"><span><?php _e('This field cannot be empty.', 'fleximpletheme'); ?></span></div>
 </form>

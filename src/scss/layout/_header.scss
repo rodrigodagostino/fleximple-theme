@@ -25,9 +25,12 @@
     position: fixed;
     background-color: $site-header__background-color--scrolled;
 
-    .branding {
-      svg {
-        height: rem(28px);
+    @if ($logo__width--sticky != null) or ($logo__height--sticky != null) {
+      .branding {
+        svg {
+          width: $logo__width--sticky;
+          height: $logo__height--sticky;
+        }
       }
     }
   }
@@ -79,6 +82,19 @@
           margin: $site-main__margin--sticky--small;
         }
       }
+
+      @if ($logo__width--sticky--small != null) or
+        ($logo__height--sticky --small!= null)
+      {
+        &.is-scrolled {
+          .branding {
+            svg {
+              width: $logo__width--sticky--small;
+              height: $logo__height--sticky--small;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -98,6 +114,19 @@
           margin: $site-main__margin--sticky--medium;
         }
       }
+
+      @if ($logo__width--sticky--medium != null) or
+        ($logo__height--sticky--medium != null)
+      {
+        &.is-scrolled {
+          .branding {
+            svg {
+              width: $logo__width--sticky--medium;
+              height: $logo__height--sticky--medium;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -115,6 +144,19 @@
       & + .site-main {
         @if ($site-main__margin--sticky--large != null) {
           margin: $site-main__margin--sticky--large;
+        }
+      }
+
+      @if ($logo__width--sticky--large != null) or
+        ($logo__height--sticky--large != null)
+      {
+        &.is-scrolled {
+          .branding {
+            svg {
+              width: $logo__width--sticky--large;
+              height: $logo__height--sticky--large;
+            }
+          }
         }
       }
     }

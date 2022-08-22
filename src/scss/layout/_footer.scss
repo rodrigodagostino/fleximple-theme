@@ -41,22 +41,26 @@
       vertical-align: top; // Removes blank space below.
     }
 
-    svg {
-      circle,
-      path,
-      rect {
-        fill: $footer-logo__fill;
-        transition: fill 0.3s ease;
-      }
-    }
-
-    &:focus,
-    &:hover {
+    @if ($footer-logo__fill != null) {
       svg {
         circle,
         path,
         rect {
-          fill: $footer-logo__fill--hover;
+          fill: $footer-logo__fill;
+          transition: fill 0.3s ease;
+        }
+      }
+    }
+
+    @if ($footer-logo__fill--hover != null) {
+      &:focus,
+      &:hover {
+        svg {
+          circle,
+          path,
+          rect {
+            fill: $footer-logo__fill--hover;
+          }
         }
       }
     }

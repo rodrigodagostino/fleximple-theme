@@ -19,22 +19,26 @@
     vertical-align: top; // Removes blank space below.
   }
 
-  svg {
-    circle,
-    path,
-    rect {
-      fill: $logo__fill;
-      transition: fill 0.3s ease;
-    }
-  }
-
-  &:focus,
-  &:hover {
+  @if ($logo__fill != null) {
     svg {
       circle,
       path,
       rect {
-        fill: $logo__fill--hover;
+        fill: $logo__fill;
+        transition: fill 0.3s ease;
+      }
+    }
+  }
+
+  @if ($logo__fill--hover != null) {
+    &:focus,
+    &:hover {
+      svg {
+        circle,
+        path,
+        rect {
+          fill: $logo__fill--hover;
+        }
       }
     }
   }

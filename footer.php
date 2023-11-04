@@ -56,6 +56,15 @@
             } ?>
           </aside><!-- .widget-area -->
         <?php endif; ?>
+
+        <?php if (is_active_sidebar('footer-3')) : ?>
+          <aside class="widget-area footer-widget-area-3" role="complementary" aria-label="<?php esc_attr_e('Footer Widget Area 3', 'fleximpletheme'); ?>">
+            <?php
+            if (is_active_sidebar('footer-3')) {
+              dynamic_sidebar('footer-3');
+            } ?>
+          </aside><!-- .widget-area -->
+        <?php endif; ?>
       </div>
 
       <div class="site-footer__bottom">

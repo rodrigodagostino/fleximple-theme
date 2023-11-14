@@ -9,8 +9,10 @@
  ---------------------*/
 a {
   color: $link__color;
-  transition: color 0.2s ease, background-color 0.2s ease,
-    border-color 0.2s ease;
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
   text-decoration: none;
 
   @if ($link__color--visited != null) {
@@ -78,7 +80,7 @@ h6 {
   }
 
   svg {
-    transition: all 0.3s ease;
+    transition: all 0.32s;
   }
 
   @import "navigation/branding";
@@ -135,8 +137,11 @@ h6 {
     visibility: hidden;
     opacity: 0;
     transform: translateY(-4%);
-    transition: visibility 0s ease 320ms, opacity 320ms ease,
-      transform 0s linear 320ms, background-color 0.2s ease;
+    transition:
+      visibility 0s ease 320ms,
+      opacity 320ms,
+      transform 0s linear 320ms,
+      background-color 0.2s;
     will-change: transform;
     z-index: -1;
 
@@ -144,8 +149,11 @@ h6 {
       visibility: visible;
       opacity: 1;
       transform: translateY(0%);
-      transition: visibility 0s linear, opacity 320ms ease, transform 320ms ease,
-        background-color 0.2s ease;
+      transition:
+        visibility 0s linear,
+        opacity 320ms,
+        transform 320ms,
+        background-color 0.2s;
     }
   }
 
@@ -154,8 +162,8 @@ h6 {
     top: 0;
     bottom: 0;
     left: 0;
-    width: calc(100% - rem(36px));
-    max-width: rem(480px);
+    width: calc(100% - 2.25rem);
+    max-width: 30rem;
     transform: translateX(-110%);
     transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     will-change: transform;
@@ -345,7 +353,9 @@ h6 {
     background-color: $pagination-number__background-color;
     padding: $pagination-number__padding;
     border-radius: $pagination-number__border-radius;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      background-color 0.32s,
+      box-shadow 0.32s;
     display: flex;
     align-items: center;
 

@@ -11,7 +11,9 @@
   width: 100%;
   position: relative;
   z-index: 100;
-  transition: background-color 0.32s ease, padding 0.32ms ease;
+  transition:
+    background-color 0.32s,
+    padding 0.32s;
 
   &.is-sticky {
     position: absolute;
@@ -60,7 +62,7 @@
 
 .site-description {
   margin: var(--space-025) 0 0;
-  font-size: rem(17px);
+  font-size: 1.0625rem;
   font-weight: inherit;
   line-height: 1.4;
   word-wrap: break-word;

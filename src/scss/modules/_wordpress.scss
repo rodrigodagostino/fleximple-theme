@@ -7,7 +7,7 @@
 body.logged-in {
   .collapsible-navigation {
     &.is-fixed {
-      top: rem(46px);
+      top: 2.875rem;
     }
   }
 }
@@ -16,7 +16,7 @@ body.logged-in {
   body.logged-in {
     .collapsible-navigation {
       &.is-fixed {
-        top: rem(32px);
+        top: 2rem;
       }
     }
   }

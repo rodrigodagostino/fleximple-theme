@@ -33,7 +33,7 @@
 .container {
   max-width: 100%;
   margin: 0 auto;
-  transition: padding 0.3s ease;
+  transition: padding 0.32s;
 
   .container {
     width: 100%;
@@ -136,7 +136,7 @@
 
     .entry-byline,
     .entry-date {
-      font-size: rem(14px);
+      font-size: 0.875rem;
     }
 
     .entry-byline::after {

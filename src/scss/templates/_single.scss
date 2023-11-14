@@ -71,7 +71,9 @@ body.single {
 }
 
 body.single,
-body.page:not(.page-template-front-page):not(.page-template-front-page-with-sidebar) {
+body.page:not(.page-template-front-page):not(
+    .page-template-front-page-with-sidebar
+  ) {
   .entry-header,
   .entry-footer,
   .post-navigation,
@@ -157,8 +159,12 @@ body.page:not(.page-template-front-page):not(.page-template-front-page-with-side
         padding: $single__entry-tag__padding;
         margin-top: $single__entry-tag__gap;
         margin-right: $single__entry-tag__gap;
-        transition: background-color 0.2s ease, color 0.2s ease,
-          border-color 0.2s ease, border-radius 0.2s ease, box-shadow 0.2s ease;
+        transition:
+          background-color 0.2s,
+          color 0.2s,
+          border-color 0.2s,
+          border-radius 0.2s,
+          box-shadow 0.2s;
         -webkit-appearance: none;
         white-space: nowrap;
 
@@ -206,7 +212,9 @@ body.page:not(.page-template-front-page):not(.page-template-front-page-with-side
   }
 
   body.single,
-  body.page:not(.page-template-front-page):not(.page-template-front-page-with-sidebar) {
+  body.page:not(.page-template-front-page):not(
+      .page-template-front-page-with-sidebar
+    ) {
     .entry-header {
     }
 
@@ -289,7 +297,9 @@ body.page:not(.page-template-front-page):not(.page-template-front-page-with-side
   }
 
   body.single,
-  body.page:not(.page-template-front-page):not(.page-template-front-page-with-sidebar) {
+  body.page:not(.page-template-front-page):not(
+      .page-template-front-page-with-sidebar
+    ) {
     .entry-header {
     }
 
@@ -370,7 +380,9 @@ body.page:not(.page-template-front-page):not(.page-template-front-page-with-side
   }
 
   body.single,
-  body.page:not(.page-template-front-page):not(.page-template-front-page-with-sidebar) {
+  body.page:not(.page-template-front-page):not(
+      .page-template-front-page-with-sidebar
+    ) {
     .entry-header {
     }
 
@@ -432,7 +444,9 @@ body.page:not(.page-template-front-page):not(.page-template-front-page-with-side
 
 @media only screen and (min-width: var(--bp-xlarge)) {
   body.single,
-  body.page:not(.page-template-front-page):not(.page-template-front-page-with-sidebar) {
+  body.page:not(.page-template-front-page):not(
+      .page-template-front-page-with-sidebar
+    ) {
     .entry-header {
     }
 

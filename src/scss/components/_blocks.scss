@@ -58,8 +58,12 @@ $colors: (
     border-style: solid;
     border-radius: var(--space-025);
     padding: var(--space-100) var(--space-125);
-    transition: background-color 0.2s ease, color 0.2s ease,
-      border-color 0.2s ease, border-radius 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
+      border-radius 0.2s,
+      box-shadow 0.2s;
     -webkit-appearance: none;
     cursor: pointer;
 
@@ -306,9 +310,13 @@ $colors: (
     border-width: 1px;
     border-style: solid;
     border-radius: var(--space-025);
-    padding: rem(8px 16px 10px);
-    transition: background-color 0.2s ease, color 0.2s ease,
-      border-color 0.2s ease, border-radius 0.2s ease, box-shadow 0.2s ease;
+    padding: 0.5rem 1rem 0.625rem;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
+      border-radius 0.2s,
+      box-shadow 0.2s;
     -webkit-appearance: none;
     white-space: nowrap;
 
@@ -339,7 +347,7 @@ $colors: (
     margin-bottom: 0;
 
     img {
-      max-height: rem(150px);
+      max-height: 9.375rem;
     }
   }
 
@@ -796,7 +804,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .swiper-button-next,
   .swiper-pagination {
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.32s;
   }
 
   .swiper-pagination-fraction,
@@ -806,8 +814,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   }
 
   .swiper-pagination-bullet {
-    width: rem(10px);
-    height: rem(10px);
+    width: 0.625rem;
+    height: 0.625rem;
 
     &-active {
       background: var(--color-primary);
@@ -857,8 +865,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   @media only screen and (min-width: var(--bp-medium)) {
     .fleximple-modal {
       &__close-button {
-        top: rem(32px);
-        right: rem(32px);
+        top: 2rem;
+        right: 2rem;
       }
     }
   }

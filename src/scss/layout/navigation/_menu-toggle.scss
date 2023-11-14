@@ -14,7 +14,7 @@
   box-shadow: $menu-toggle__box-shadow;
   outline: none;
   position: relative;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s;
   cursor: pointer;
   z-index: 10;
 
@@ -26,7 +26,7 @@
     width: $menu-toggle__line__width;
     height: $menu-toggle__line__height;
     background-color: $menu-toggle__line__background-color;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s;
 
     &::before,
     &::after {
@@ -34,10 +34,12 @@
       position: absolute;
       left: 0;
       width: 100%;
-      height: rem(3px);
+      height: 0.1875rem;
       background-color: $menu-toggle__line__background-color;
-      transition: top 150ms ease 0.2s, bottom 150ms ease 0.2s,
-        transform 150ms ease;
+      transition:
+        top 0.16s ease 0.2s,
+        bottom 0.16s ease 0.2s,
+        transform 0.16s;
     }
 
     &::before {
@@ -88,7 +90,10 @@
       &::before,
       &::after {
         background-color: $menu-toggle__line__background-color--active;
-        transition: top 150ms ease, bottom 150ms ease, transform 150ms ease 0.2s;
+        transition:
+          top 0.16s,
+          bottom 0.16s,
+          transform 0.16s 0.2s;
       }
 
       &::before {
@@ -166,8 +171,8 @@
     padding: var(--space-050);
 
     svg {
-      width: rem(16px);
-      height: rem(16px);
+      width: 1rem;
+      height: 1rem;
     }
   }
 

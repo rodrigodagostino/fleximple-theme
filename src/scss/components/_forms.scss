@@ -21,8 +21,11 @@ input[type="submit"] {
     box-shadow: $button__box-shadow;
   }
   padding: $button__padding;
-  transition: color 0.2s ease, background-color 0.2s ease, border 0.2s ease,
-    box-shadow 0.2s ease;
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    border 0.2s,
+    box-shadow 0.2s;
   -webkit-appearance: none;
   cursor: pointer;
 
@@ -87,7 +90,9 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea:not(.editor-post-title__input):not(.editor-default-block-appender__content):not(.editor-plain-text) {
+textarea:not(.editor-post-title__input):not(
+    .editor-default-block-appender__content
+  ):not(.editor-plain-text) {
   font-size: $input__font-size;
   color: var(--text__color);
   background-color: $input__background-color;
@@ -100,7 +105,9 @@ textarea:not(.editor-post-title__input):not(.editor-default-block-appender__cont
   padding: $input__padding;
   margin-bottom: var(--space-050);
   box-shadow: $input__box-shadow;
-  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+  transition:
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out,
     box-shadow 0.2s ease-in-out;
 
   &:focus {
@@ -128,7 +135,9 @@ input[type="radio"] {
   background-color: $checkbox-radio__background-color;
   box-shadow: $checkbox-radio__box-shadow;
   vertical-align: middle;
-  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+  transition:
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out,
     box-shadow 0.2s ease-in-out;
 
   &:checked {
@@ -165,9 +174,11 @@ select {
   border: 2px solid var(--gray-100);
 }
 
-textarea:not(.editor-post-title__input):not(.editor-default-block-appender__content):not(.editor-plain-text) {
+textarea:not(.editor-post-title__input):not(
+    .editor-default-block-appender__content
+  ):not(.editor-plain-text) {
   width: 100%;
-  height: rem(180px);
+  height: 11.25rem;
   padding: $text-area__padding;
 }
 

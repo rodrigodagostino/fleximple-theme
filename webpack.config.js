@@ -1,6 +1,5 @@
 const path = require('path')
 const postcssPresetEnv = require('postcss-preset-env')
-const postcssRem = require('postcss-rem')
 const postcssColorMod = require('postcss-color-mod-function')
 const postcssAtVariables = require('postcss-at-rules-variables')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -97,12 +96,6 @@ const config = {
                     autoprefixer: {
                       remove: false,
                     },
-                  }),
-                  postcssRem({
-                    /* baseline: 10, // Default to 16 */
-                    /* convert: 'px', // Default to rem */
-                    // fallback: true,
-                    precision: 6, // Default to 5
                   }),
                   postcssColorMod(),
                   postcssAtVariables({

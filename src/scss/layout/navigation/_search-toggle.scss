@@ -6,6 +6,7 @@
 
 .search-toggle {
   display: none;
+  flex-shrink: 0;
   background-color: $search-toggle__background-color;
   width: $search-toggle__width;
   height: $search-toggle__height;

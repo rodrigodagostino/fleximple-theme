@@ -231,10 +231,6 @@ $colors: (
 
   .wp-block-column {
     flex-basis: 100%;
-    padding: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-bottom: var(--space-150);
   }
 
   @media only screen and (min-width: var(--bp-medium)) {
